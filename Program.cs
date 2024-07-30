@@ -12,7 +12,7 @@ class Program
         MenuPrincipale();   
     }
 
-// FUNZIONI PER MENU E SOTTOMENU
+// FUNZIONI PER MENU E SOTTOMENU------------------------------------------------------------------------------------------------------
 
     static void MenuPrincipale()
     {
@@ -31,22 +31,19 @@ class Program
         {
             case 1:
                 Console.Clear();
-                ScaricaElemento(@"luoghi.json", "Il luogo sarà: ");  // Metodo per ottenere un luogo
+                ScaricaElemento(@"luoghi.json", "Il luogo sarà: ", 1);  // Metodo per ottenere un luogo
                 break;
 
             case 2:
                 Console.Clear();
-
-                // Servirà un sottomenu per scegliere il soggetto
-
+                            // Metodo per poter scegliere un soggetto specifico
+                PreferenzaSoggetto();
                 break;
 
             case 3:
                 Console.Clear();
-                ScaricaElemento(@"luoghi.json", "Il luogo sarà: ");
-
-                // Servirà un sottomenu per scegliere un soggetto
-
+                ScaricaElemento(@"luoghi.json", "Il luogo sarà: ", 1);
+                PreferenzaSoggetto();
                 break;
 
             default:
@@ -54,9 +51,88 @@ class Program
                 break;
         }
     }
-// FUNZIONE PER ESTRAPOLARE GLI ELEMENTI DAI FILE JSON
+//------------------------------------------------------------------------------------------------------------------------------------
+static void PreferenzaSoggetto()
+    {
+        int scelta; //
+    //--------------//
 
-    static void ScaricaElemento(string path, string messaggio)
+                    // Menu per la preferenza di soggetto
+        Console.WriteLine("Scegliere tra le seguenti opzioni (1/2/3/4)");
+        Console.WriteLine("1.Umano");
+        Console.WriteLine("2.Animale");
+        Console.WriteLine("3.Creatura");
+        Console.WriteLine("4.Nessuna preferenza");
+        
+        scelta = Convert.ToInt32(Console.ReadLine()!.Trim());
+
+        switch (scelta)
+        {
+            case 1:
+                            // Se viene scelto umano non ci sono specifiche da consigliare
+                break;
+
+            case 2:
+                Console.Clear();
+                ScaricaElemento(@"animali.json", "L'animale sarà: ", 1);
+                break;
+
+            case 3:
+                Console.Clear();
+
+                TipoCreatura();
+
+                break;
+
+            case 4:
+
+                // Servirà un menu per decidere il quintitativo di soggetti
+
+                break;
+
+            default:
+                PreferenzaSoggetto();
+                break;
+        }
+        
+        
+    }
+//------------------------------------------------------------------------------------------------------------------------------------
+    static void TipoCreatura()
+    {
+        string sceltaCreatura;   //
+        int quantitativoAnimali; //
+    //---------------------------//
+
+                    // Scelta tra una creatura mitologica e una propria creazione
+        Console.WriteLine("Preferisci una creatura mitologica o inventarne una te? (m/i)");
+
+        sceltaCreatura = Console.ReadLine()!.ToLower().Trim();
+
+        if (sceltaCreatura == "m")  // restituiamo una creatura random
+        {
+            Console.Clear();
+                        // Metodo per ottenere una creatura mitologica e Metodo per pulire la console
+            ScaricaElemento(@"creature.json", "La creatura sarà: ", 1);
+        }
+        else if (sceltaCreatura == "i") // restituiamo una lista di animali
+        {
+            Console.Clear();
+            Console.WriteLine("quanti animali vuoi usare per comporre la tua creatura?(2-5)");
+
+                        // Scelta numero animali
+            quantitativoAnimali = Convert.ToInt32(Console.ReadLine()!.Trim());
+            ScaricaElemento(@"animali.json", "Gli animali saranno: ", quantitativoAnimali);
+        }
+        else 
+        {
+            TipoCreatura();
+        }
+    }
+
+// FUNZIONE PER ESTRAPOLARE GLI ELEMENTI DAI FILE JSON--------------------------------------------------------------------------------
+
+    static void ScaricaElemento(string path, string messaggio, int quantitativoElementi)
     {
         Random random = new Random(); //
         int indice;                   //
@@ -69,9 +145,14 @@ class Program
                     // Viene selezionato in maniera random uno degli oggetti interni al file "dato in pasto" alla funzione
         indice = random.Next(0,obj.Count);
 
-                    // Viene stampato il valore dell'oggetto random
         Console.WriteLine(messaggio);
-        Console.WriteLine(obj[indice].elemento);
+                    // Viene stampato il valore dell'oggetto random
+        for (int i = 1; i <= quantitativoElementi ;i++ ) 
+            {
+                            // Il programma stampa un oggetto del file tramite indice scelto in maniera random
+                indice = random.Next(0, obj.Count);
+                Console.WriteLine(obj[indice].elemento);
+            }
     }
-    
+//------------------------------------------------------------------------------------------------------------------------------------
 }
