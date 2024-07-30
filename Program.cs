@@ -32,6 +32,36 @@ class Program
         } 
     }
 
+// METODI PER LA FLUIDITÀ DEL PROGRAMMA---------------------------------------------------------------------------------------------
+
+    static void Avvertimenti()
+    {
+        Console.WriteLine("REGOLE ED AVVERTIMENTI");
+        Console.WriteLine("1.I nomi di animali, creature e temi saranno scritti in inglese per convenzione");
+        Console.WriteLine("2.Se si fa un inserimento sbagliato l'opzione darà errore o/e verrà saltata");
+    }
+//----------------------------------------------------------------------------------------------------------------------------------
+    static void Proseguimento()
+    {
+                    // Per permettere all'utente di proseguire al premere di untasto e cancellare a schermo le linee precedenti
+        Console.WriteLine("\nPremere un tasto per proseguire...");
+        Console.ReadKey();
+
+        Console.Clear();
+    }
+//--------------------------------------------------------------------------------------------------------------------------------------
+    static void Conclusione()
+    {               
+                    // Frasi di chiusura
+        Console.WriteLine("Ora dovresti avere tutto l'occorrente per iniziare il tuo progetto");
+        Console.WriteLine("Di seguito alcuni siti/app dove poter pubblicare le tue opere");
+    }
+//-------------------------------------------------------------------------------------------------------------------------------
+    static void Errore()
+    {
+        Console.WriteLine("Opzione non valida");   // in caso di inserimento non previsto
+    }
+
 // FUNZIONI PER MENU E SOTTOMENU------------------------------------------------------------------------------------------------------
 
     static void MenuPrincipale()
@@ -198,7 +228,6 @@ static void PreferenzaSoggetto()
                 break;
         }
     }
-
 
 // FUNZIONE PER ESTRAPOLARE GLI ELEMENTI DAI FILE JSON--------------------------------------------------------------------------------
 
