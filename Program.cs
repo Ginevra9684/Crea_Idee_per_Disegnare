@@ -3,13 +3,33 @@ class Program
 {
     public static void Main(string[] args)
     {
+        string scelta;  //
+        //--------------//
         Console.Clear();
 
                     // Titolo
         Console.WriteLine("IDEE PER ILLUSTRAZIONI\n");
 
                     // Metodo per visualizzare il primo menu di scelta
-        MenuPrincipale();   
+        MenuPrincipale(); 
+
+        Console.WriteLine("Vuoi un tema di riferimento? (s/n)");
+
+        scelta = Console.ReadLine()!.ToLower().Trim();
+
+        if (scelta == "s")
+        {
+            ScaricaElemento(@"temi.json", "Il tema sarà : ", 1);   // Metodo per ottenere un tema
+        }
+
+        Console.WriteLine("Vuoi una tecnica di riferimento? (s/n)");
+
+        scelta = Console.ReadLine()!.ToLower().Trim();
+
+        if (scelta == "s")
+        {
+            ScaricaElemento(@"tecniche.json", "La tecnica sarà : ", 1);
+        } 
     }
 
 // FUNZIONI PER MENU E SOTTOMENU------------------------------------------------------------------------------------------------------
