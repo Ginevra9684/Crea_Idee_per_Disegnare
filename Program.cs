@@ -16,29 +16,7 @@ class Program
 
         MenuPrincipale(); 
 
-        Console.WriteLine("Vuoi un tema di riferimento? (s/n)");
-
-        scelta = Console.ReadKey(true).KeyChar.ToString()!.ToLower();
-
-        if (scelta == "s")
-        {
-            ScaricaElemento(@"temi.json", "Il tema sarà : ", 1); 
-            Proseguimento();
-        }
-        else if (scelta == "n") Proseguimento();
-        else Errore();
-
-        Console.WriteLine("Vuoi una tecnica di riferimento? (s/n)");
-
-        scelta = Console.ReadKey(true).KeyChar.ToString()!.ToLower();
-
-        if (scelta == "s")
-        {
-            ScaricaElemento(@"tecniche.json", "La tecnica sarà : ", 1);
-            Proseguimento();
-        } 
-        else if (scelta == "n") Proseguimento();
-        else Errore();
+        ScelteSecondarie();
 
         Conclusione();  
     }
@@ -104,6 +82,34 @@ class Program
                 Proseguimento();
                 PreferenzaSoggetto();
                 break;
+        }
+    }
+//------------------------------------------------------------------------------------------------------------------------------------
+static void CaratteristicheLuogo()
+    {
+        var caratteristiche = AnsiConsole.Prompt(
+        new MultiSelectionPrompt<string>()
+            .Title("<-<-<-[50]CARATTERISTICHE LUOGO[/]->->->")
+            .NotRequired() 
+            .PageSize(3)
+            .MoreChoicesText("[grey](Spostati su e giù per più opzioni)[/]")
+            .InstructionsText(
+                "[grey](Premi [117]<spacebar>[/] per aggiungere una richiesta, " + 
+                "[123]<enter>[/] per confermare le tue scelte)[/]")
+            .AddChoices(new[] {
+                "[86]1.[/] Meteo[86].[/]", "[85]2.[/] Momento[85].[/]"
+            }));
+
+        if (caratteristiche.Contains("[86]1.[/] Meteo[86].[/]"))
+        {
+            ScaricaElemento(@"meteo.json", "Il meteo sarà: ", 1);
+            Proseguimento();
+        }
+
+        if (caratteristiche.Contains("[85]2.[/] Momento[85].[/]"))
+        {
+            ScaricaElemento(@"momenti.json", "Il momento sarà: ", 1);
+            Proseguimento();
         }
     }
 //------------------------------------------------------------------------------------------------------------------------------------
@@ -255,6 +261,35 @@ static void PreferenzaSoggetto()
             default:
                 Errore();
                 break;
+        }
+    }
+//------------------------------------------------------------------------------------------------------------------------------------
+static void ScelteSecondarie()
+    {
+                    // Prompt per scelte multiple
+        var altreOpzioni = AnsiConsole.Prompt(
+        new MultiSelectionPrompt<string>()
+            .Title("<-<-<-[50]AGGIUNTE[/]->->->")
+            .NotRequired() 
+            .PageSize(10)
+            .MoreChoicesText("[grey](Spostati su e giù per più opzioni)[/]")
+            .InstructionsText(
+                "[grey](Premi [117]<spacebar>[/] per aggiungere una richiesta, " + 
+                "[123]<enter>[/] per confermare le tue scelte)[/]")
+            .AddChoices(new[] {
+                "[86]1.[/] Tema[86].[/]", "[85]2.[/] Tecnica[85].[/]"
+            }));
+        
+        if (altreOpzioni.Contains("[86]1.[/] Tema[86].[/]"))
+        {
+            ScaricaElemento(@"temi.json", "Il tema sarà : ", 1); 
+            Proseguimento();
+        }
+
+        if (altreOpzioni.Contains("[85]2.[/] Tecnica[85].[/]"))
+        {
+            ScaricaElemento(@"tecniche.json", "La tecnica sarà : ", 1);
+            Proseguimento();
         }
     }
 
