@@ -10,26 +10,37 @@ class Program
                     // Titolo
         Console.WriteLine("IDEE PER ILLUSTRAZIONI\n");
 
+        Avvertimenti();
+        Proseguimento();
+
                     // Metodo per visualizzare il primo menu di scelta
         MenuPrincipale(); 
 
         Console.WriteLine("Vuoi un tema di riferimento? (s/n)");
 
-        scelta = Console.ReadLine()!.ToLower().Trim();
+        scelta = Console.ReadKey(true).KeyChar.ToString()!.ToLower();
 
         if (scelta == "s")
         {
             ScaricaElemento(@"temi.json", "Il tema sarà : ", 1);   // Metodo per ottenere un tema
+            Proseguimento();
         }
+        else if (scelta == "n") Proseguimento();
+        else Errore();
 
         Console.WriteLine("Vuoi una tecnica di riferimento? (s/n)");
 
-        scelta = Console.ReadLine()!.ToLower().Trim();
+        scelta = Console.ReadKey(true).KeyChar.ToString()!.ToLower();
 
         if (scelta == "s")
         {
             ScaricaElemento(@"tecniche.json", "La tecnica sarà : ", 1);
+            Proseguimento();
         } 
+        else if (scelta == "n") Proseguimento();
+        else Errore();
+
+        Conclusione();  // Metodo per chiudere il programma 
     }
 
 // METODI PER LA FLUIDITÀ DEL PROGRAMMA---------------------------------------------------------------------------------------------
@@ -46,7 +57,6 @@ class Program
                     // Per permettere all'utente di proseguire al premere di untasto e cancellare a schermo le linee precedenti
         Console.WriteLine("\nPremere un tasto per proseguire...");
         Console.ReadKey();
-
         Console.Clear();
     }
 //--------------------------------------------------------------------------------------------------------------------------------------
@@ -75,30 +85,44 @@ class Program
         Console.WriteLine("2.Soggetto");
         Console.WriteLine("3.Ambiente e Soggetto");
 
-        scelta = Convert.ToInt32(Console.ReadLine());
+        try
+        {               
+            scelta = int.Parse(Console.ReadKey(true).KeyChar.ToString()!);
 
-        switch (scelta)
+            switch (scelta)
+            {
+                case 1:
+                    Console.Clear();
+                    ScaricaElemento(@"luoghi.json", "Il luogo sarà: ", 1);  // Metodo per ottenere un luogo
+                    Proseguimento();
+                    break;
+
+                case 2:
+                    Console.Clear();
+                                // Metodo per poter scegliere un soggetto specifico
+                    PreferenzaSoggetto();
+                    break;
+
+                case 3:
+                    Console.Clear();
+                    ScaricaElemento(@"luoghi.json", "Il luogo sarà: ", 1);
+                    Proseguimento();
+                    PreferenzaSoggetto();
+                    break;
+
+                default:
+                    Errore();
+                    Proseguimento();
+                    MenuPrincipale();
+                    break;
+            }
+        }
+        catch (Exception ex)
         {
-            case 1:
-                Console.Clear();
-                ScaricaElemento(@"luoghi.json", "Il luogo sarà: ", 1);  // Metodo per ottenere un luogo
-                break;
-
-            case 2:
-                Console.Clear();
-                            // Metodo per poter scegliere un soggetto specifico
-                PreferenzaSoggetto();
-                break;
-
-            case 3:
-                Console.Clear();
-                ScaricaElemento(@"luoghi.json", "Il luogo sarà: ", 1);
-                PreferenzaSoggetto();
-                break;
-
-            default:
-                MenuPrincipale();
-                break;
+            Console.WriteLine("Si richiede l'inserimento di un numero");
+            Console.WriteLine($"ERRORE NON TRATTATO: {ex.Message}");
+            Proseguimento();
+            MenuPrincipale();
         }
     }
 //------------------------------------------------------------------------------------------------------------------------------------
@@ -113,38 +137,50 @@ static void PreferenzaSoggetto()
         Console.WriteLine("2.Animale");
         Console.WriteLine("3.Creatura");
         Console.WriteLine("4.Nessuna preferenza");
-        
-        scelta = Convert.ToInt32(Console.ReadLine()!.Trim());
 
-        switch (scelta)
+        try
         {
-            case 1:
-                            // Se viene scelto umano non ci sono specifiche da consigliare
-                break;
+            scelta = int.Parse(Console.ReadKey(true).KeyChar.ToString()!);
 
-            case 2:
-                Console.Clear();
-                ScaricaElemento(@"animali.json", "L'animale sarà: ", 1);
-                break;
+            switch (scelta)
+            {
+                case 1:
+                    Console.Clear();
+                                // Se viene scelto umano non ci sono specifiche da consigliare
+                    Console.WriteLine($"Il soggetto sarà umano");
+                    Proseguimento();
+                    break;
 
-            case 3:
-                Console.Clear();
+                case 2:
+                    Console.Clear();
+                    ScaricaElemento(@"animali.json", "L'animale sarà: ", 1);
+                    Proseguimento();
+                    break;
 
-                TipoCreatura();
+                case 3:
+                    Console.Clear();
+                    TipoCreatura();
+                    break;
 
-                break;
+                case 4:
+                    Proseguimento();
+                    QuantitativoSoggetti();
+                    break;
 
-            case 4:
-
-                QuantitativoSoggetti();
-
-                break;
-
-            default:
-                PreferenzaSoggetto();
-                break;
+                default:
+                    Errore();
+                    Proseguimento();
+                    PreferenzaSoggetto();
+                    break;
+            }
         }
-        
+        catch (Exception ex)
+        {
+            Console.WriteLine("Si richiede l'inserimento di un numero");
+            Console.WriteLine($"ERRORE NON TRATTATO: {ex.Message}");
+            Proseguimento();
+            PreferenzaSoggetto();
+        }
         
     }
 //------------------------------------------------------------------------------------------------------------------------------------
@@ -157,25 +193,39 @@ static void PreferenzaSoggetto()
                     // Scelta tra una creatura mitologica e una propria creazione
         Console.WriteLine("Preferisci una creatura mitologica o inventarne una te? (m/i)");
 
-        sceltaCreatura = Console.ReadLine()!.ToLower().Trim();
+        try
+        {
+            sceltaCreatura = Console.ReadKey(true).KeyChar.ToString()!.ToLower();
 
-        if (sceltaCreatura == "m")  // restituiamo una creatura random
-        {
-            Console.Clear();
-                        // Metodo per ottenere una creatura mitologica e Metodo per pulire la console
-            ScaricaElemento(@"creature.json", "La creatura sarà: ", 1);
-        }
-        else if (sceltaCreatura == "i") // restituiamo una lista di animali
-        {
-            Console.Clear();
-            Console.WriteLine("quanti animali vuoi usare per comporre la tua creatura?(2-5)");
+            if (sceltaCreatura == "m")  // restituiamo una creatura random
+            {
+                Console.Clear();
+                            // Metodo per ottenere una creatura mitologica e Metodo per pulire la console
+                ScaricaElemento(@"creature.json", "La creatura sarà: ", 1);
+                Proseguimento();
+            }
+            else if (sceltaCreatura == "i") // restituiamo una lista di animali
+            {
+                Console.Clear();
+                Console.WriteLine("quanti animali vuoi usare per comporre la tua creatura?(2-5)");
 
-                        // Scelta numero animali
-            quantitativoAnimali = Convert.ToInt32(Console.ReadLine()!.Trim());
-            ScaricaElemento(@"animali.json", "Gli animali saranno: ", quantitativoAnimali);
+                            // Scelta numero animali
+                quantitativoAnimali = Convert.ToInt32(Console.ReadLine()!.Trim());
+                ScaricaElemento(@"animali.json", "Gli animali saranno: ", quantitativoAnimali);
+                Proseguimento();
+            }
+            else 
+            {
+                Errore();
+                Proseguimento();
+                TipoCreatura();
+            }
         }
-        else 
+        catch (Exception ex)
         {
+                        // Non preciso un messaggio perchè non sono a conoscenza di tipi di eccezioni per questa casistica
+            Console.WriteLine($"ERRORE NON TRATTATO: {ex.Message}");
+            Proseguimento();
             TipoCreatura();
         }
     }
@@ -188,7 +238,7 @@ static void PreferenzaSoggetto()
         Console.WriteLine("Preferisci un soggetto unico o una coppia di soggetti? (u/c)");
 
                     // scelta quantità soggetti e relative casistiche 
-        quantitativoSoggetti = Console.ReadLine()!.ToLower().Trim();
+        quantitativoSoggetti = Console.ReadKey(true).KeyChar.ToString()!.ToLower();
 
         if (quantitativoSoggetti == "u") SoggettoCasuale();
         
@@ -196,12 +246,13 @@ static void PreferenzaSoggetto()
         {
             Console.WriteLine("Il primo soggetto sarà umano il secondo sarà sorteggiato casualmente");
 
-
+            Proseguimento();
             SoggettoCasuale();
         }
         else 
         {
-
+            Errore();
+            Proseguimento();
             QuantitativoSoggetti();
         }
     }
@@ -219,12 +270,19 @@ static void PreferenzaSoggetto()
         {
             case 1:
                 Console.WriteLine("Il soggetto sarà umano");
+                Proseguimento();
                 break;
             case 2:
                 ScaricaElemento(@"animali.json", "L'animale sarà: ", 1);
+                Proseguimento();
                 break;
             case 3:
                 TipoCreatura();
+                Proseguimento();
+                break;
+
+            default:
+                Errore();
                 break;
         }
     }
@@ -253,5 +311,4 @@ static void PreferenzaSoggetto()
                 Console.WriteLine(obj[indice].elemento);
             }
     }
-//------------------------------------------------------------------------------------------------------------------------------------
 }
