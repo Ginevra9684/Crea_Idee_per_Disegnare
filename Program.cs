@@ -86,7 +86,7 @@ static void PreferenzaSoggetto()
 
             case 4:
 
-                // Servirà un menu per decidere il quintitativo di soggetti
+                QuantitativoSoggetti();
 
                 break;
 
@@ -129,6 +129,56 @@ static void PreferenzaSoggetto()
             TipoCreatura();
         }
     }
+//------------------------------------------------------------------------------------------------------------------------------------
+    static void QuantitativoSoggetti()
+    {
+        string quantitativoSoggetti; //
+    //-------------------------------//
+
+        Console.WriteLine("Preferisci un soggetto unico o una coppia di soggetti? (u/c)");
+
+                    // scelta quantità soggetti e relative casistiche 
+        quantitativoSoggetti = Console.ReadLine()!.ToLower().Trim();
+
+        if (quantitativoSoggetti == "u") SoggettoCasuale();
+        
+        else if (quantitativoSoggetti == "c")
+        {
+            Console.WriteLine("Il primo soggetto sarà umano il secondo sarà sorteggiato casualmente");
+
+
+            SoggettoCasuale();
+        }
+        else 
+        {
+
+            QuantitativoSoggetti();
+        }
+    }
+
+// METODI PER SCELTE RANDOM ------------------------------------------------------------------------------------------------------------------------------------
+    static void SoggettoCasuale()
+    {
+        Random random = new Random(); //
+        int soggettoRandom;           //
+    //--------------------------------//
+
+        soggettoRandom = random.Next(1, 4);
+
+        switch(soggettoRandom)
+        {
+            case 1:
+                Console.WriteLine("Il soggetto sarà umano");
+                break;
+            case 2:
+                ScaricaElemento(@"animali.json", "L'animale sarà: ", 1);
+                break;
+            case 3:
+                TipoCreatura();
+                break;
+        }
+    }
+
 
 // FUNZIONE PER ESTRAPOLARE GLI ELEMENTI DAI FILE JSON--------------------------------------------------------------------------------
 
