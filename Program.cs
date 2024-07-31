@@ -3,15 +3,25 @@
 using Spectre.Console;
 class Program
 {
+                // Contenitore per gli elementi selezionati
+    static Dictionary <string, List<string>> tabellaElementi = new Dictionary <string, List<string>>();
+
+                //  Buleano per far ripartire un nuovo progetto finchè non si setta a falso
+    static bool progettando = true;
     public static void Main(string[] args)
     {
-        AnsiConsole.Clear();
-        AnsiConsole.Markup("[50]IDEE PER ILLUSTRAZIONI[/]:artist_palette:\n\n");
+        do 
+        {
+            AnsiConsole.Clear();
+            AnsiConsole.Markup("[50]IDEE PER ILLUSTRAZIONI[/]:artist_palette:\n\n");
 
-        Avvertimenti();
-        MenuPrincipale(); 
-        ScelteSecondarie();
-        Conclusione();  
+            Avvertimenti();
+            MenuPrincipale(); 
+            ScelteSecondarie();
+            MenuFinale(); 
+            Console.CursorVisible = true;
+        }
+        while (progettando);
     }
 
 // METODI PER LA FLUIDITÀ DEL PROGRAMMA---------------------------------------------------------------------------------------------
@@ -60,13 +70,13 @@ class Program
         switch (input)
         {
             case "[86]1.[/]Ambiente[86].[/]":
-                ScaricaElemento(@"luoghi.json", "Il luogo sarà: ", 1); 
+                ScaricaElemento(@"caricamenti/luoghi.json", "Il luogo sarà: ", 1, "luogo"); 
                 CaratteristicheLuogo();
                 break;
             case "[85]2.[/]Soggetto[85].[/]":   PreferenzaSoggetto();    
                 break;
             case "[49]3.[/]Ambiente e Soggetto[49].[/]":
-                ScaricaElemento(@"luoghi.json", "Il luogo sarà: ", 1);
+                ScaricaElemento(@"caricamenti/luoghi.json", "Il luogo sarà: ", 1, "luogo");
                 CaratteristicheLuogo();
                 PreferenzaSoggetto();
                 break;
@@ -88,8 +98,8 @@ static void CaratteristicheLuogo()
                 "[86]1.[/] Meteo[86].[/]", "[85]2.[/] Momento[85].[/]"
             }));
 
-        if (caratteristiche.Contains("[86]1.[/] Meteo[86].[/]"))    ScaricaElemento(@"meteo.json", "Il meteo sarà: ", 1);
-        if (caratteristiche.Contains("[85]2.[/] Momento[85].[/]"))    ScaricaElemento(@"momenti.json", "Il momento sarà: ", 1);
+        if (caratteristiche.Contains("[86]1.[/] Meteo[86].[/]"))    ScaricaElemento(@"caricamenti/meteo.json", "Il meteo sarà: ", 1, "meteo");
+        if (caratteristiche.Contains("[85]2.[/] Momento[85].[/]"))    ScaricaElemento(@"caricamenti/momenti.json", "Il momento sarà: ", 1, "momento giornata");
     }
 //------------------------------------------------------------------------------------------------------------------------------------
 static void PreferenzaSoggetto()
@@ -113,7 +123,7 @@ static void PreferenzaSoggetto()
                 Console.WriteLine($"Il soggetto sarà umano");
                 Proseguimento();
                 break;
-            case "[85]2.[/]Animale[85].[/]":    ScaricaElemento(@"animali.json", "L'animale sarà: ", 1);
+            case "[85]2.[/]Animale[85].[/]":    ScaricaElemento(@"caricamenti/animali.json", "L'animale sarà: ", 1, "animale");
                 break;
             case "[49]3.[/]Creatura[49].[/]":    TipoCreatura();
                 break;
@@ -139,7 +149,7 @@ static void PreferenzaSoggetto()
 
         switch (input)
         {
-            case "[86]1.[/]Creatura Mitologica[86].[/]":    ScaricaElemento(@"creature.json", "La creatura sarà: ", 1);
+            case "[86]1.[/]Creatura Mitologica[86].[/]":    ScaricaElemento(@"caricamenti/creature.json", "La creatura sarà: ", 1, "creatura mitologica");
                 break;
             case "[85]2.[/]Propria Invenzione[85].[/]":
                 AnsiConsole.Clear();
@@ -149,19 +159,10 @@ static void PreferenzaSoggetto()
                     .Title("<-<-<-[50]QUANTI ANIMALI PER LA CREAZIONE?[/]->->->")
                     .PageSize(3)
                     .MoreChoicesText("Spostati con le frecce direzionali.")
-                    .AddChoices(new[] {"[86].2[/]","[85].3[/]","[49].4[/]","[79].5[/]"  
+                    .AddChoices(new[] {"2","3","4","5"  
                     }));
-                switch (quantitativoAnimali)
-                {
-                    case "[86].2[/]":   ScaricaElemento(@"animali.json", "Gli animali saranno: ", 2);
-                        break;
-                    case "[85].3[/]":   ScaricaElemento(@"animali.json", "Gli animali saranno: ", 3);
-                        break;
-                    case "[49].4[/]":    ScaricaElemento(@"animali.json", "Gli animali saranno: ", 4);
-                        break;
-                    case "[79].5[/]":    ScaricaElemento(@"animali.json", "Gli animali saranno: ", 5);
-                        break;
-                }
+                
+                ScaricaElemento(@"caricamenti/animali.json", "Gli animali saranno: ", int.Parse(quantitativoAnimali), "creatura composta da");
                 break;
         }
     }
@@ -207,7 +208,7 @@ static void PreferenzaSoggetto()
         {
             case 1:     Console.WriteLine("Il soggetto sarà umano");
                 break;
-            case 2:    ScaricaElemento(@"animali.json", "L'animale sarà: ", 1);
+            case 2:    ScaricaElemento(@"caricamenti/animali.json", "L'animale sarà: ", 1, "animale");
                 break;
             case 3:    TipoCreatura();
                 break;
@@ -233,16 +234,94 @@ static void ScelteSecondarie()
                 "[86]1.[/] Tema[86].[/]", "[85]2.[/] Tecnica[85].[/]"
             }));
         
-        if (altreOpzioni.Contains("[86]1.[/] Tema[86].[/]"))    ScaricaElemento(@"temi.json", "Il tema sarà : ", 1); 
-        if (altreOpzioni.Contains("[85]2.[/] Tecnica[85].[/]"))    ScaricaElemento(@"tecniche.json", "La tecnica sarà : ", 1);
+        if (altreOpzioni.Contains("[86]1.[/] Tema[86].[/]"))    ScaricaElemento(@"caricamenti/temi.json", "Il tema sarà : ", 1, "tema"); 
+        if (altreOpzioni.Contains("[85]2.[/] Tecnica[85].[/]"))    ScaricaElemento(@"caricamenti/tecniche.json", "La tecnica sarà : ", 1, "tecnica");
+    }
+//------------------------------------------------------------------------------------------------------------------------------------
+static void MenuFinale()
+    {
+        string input;  //
+    //-----------------//
+
+        input = AnsiConsole.Prompt(
+        new SelectionPrompt<string>()
+            .Title("<-<-<-[50]GESTIONALE[/]->->->")
+            .PageSize(4)
+            .MoreChoicesText("Spostati con le frecce direzionali.")
+            .AddChoices(new[] {"[86]1.[/] tabellaElementi Dati [86].[/]","[85]2.[/] Progetti [85].[/]","[49]3.[/] Nuovo Progetto [49].[/]","[79]4.[/] Esci [79].[/]"   // Quattro opzioni
+            }));
+
+        switch (input)
+        {               // Stampa tutte le chiavi e i valori del dizionario
+            case "[86]1.[/] tabellaElementi Dati [86].[/]":
+
+                foreach (var elemento in tabellaElementi)
+                {
+                    Console.WriteLine($"{elemento.Key} : {string.Join(", ", elemento.Value)}");
+                }
+                Proseguimento();
+                MenuFinale();
+                break;
+
+            case "[85]2.[/] Progetti [85].[/]":
+
+                            //NAVIGAZIONE ALL'INTERNO DELLA CARTELLA "PROGETTI"
+                            //POSSIBILITà DI SELEZIONARE UN PROGETTO SPECIFICO
+                            //IL PROGETTO DEVE POTER MOSTRARE IL CONTENUTO IN TABELLA E POTER ELIMINARE IL PROGETTO STESSO
+
+
+
+                break;
+            case "[49]3.[/] Nuovo Progetto [49].[/]":
+                input = AnsiConsole.Prompt(
+                    new SelectionPrompt<string>()
+                        .Title("<-<-<-[50]GESTIONALE[/]->->->")
+                        .PageSize(4)
+                        .MoreChoicesText("Spostati con le frecce direzionali.")
+                        .AddChoices(new[] {"[86]1.[/] Salva progetto corrente [86].[/]","[85]2.[/] Scarta progetto corrente [85].[/]"
+                        }));
+                switch (input)
+                {
+                    case "[86]1.[/] Salva progetto corrente [86].[/]" :
+                                    // Inserisce gli elementi del dizionario in un file json
+                        CreaProgetto();
+                        tabellaElementi.Clear();
+                        break;
+                    case "[85]2.[/] Scarta progetto corrente [85].[/]" :    tabellaElementi.Clear();
+                        break;
+                }
+                break;
+            case "[79]4.[/] Esci [79].[/]":
+                input = AnsiConsole.Prompt(
+                new SelectionPrompt<string>()
+                    .Title("<-<-<-[50]GESTIONALE[/]->->->")
+                    .PageSize(4)
+                    .MoreChoicesText("Spostati con le frecce direzionali.")
+                    .AddChoices(new[] {"[86]1.[/] Salva progetto corrente [86].[/]","[85]2.[/] Scarta progetto corrente [85].[/]"
+                    }));
+                switch (input)
+                {
+                    case "[86]1.[/] Salva progetto corrente [86].[/]" :
+                        CreaProgetto();
+                        Conclusione();
+                        progettando = false;
+                        break;
+                    case "[85]2.[/] Scarta progetto corrente [85].[/]" :    
+                        Conclusione();
+                        progettando = false;
+                        break;
+                }
+                break;
+        }
     }
 
 // FUNZIONE PER ESTRAPOLARE GLI ELEMENTI DAI FILE JSON--------------------------------------------------------------------------------
 
-    static void ScaricaElemento(string path, string messaggio, int quantitativoElementi)
+    static void ScaricaElemento(string path, string messaggio, int quantitativoElementi, string chiavePerDizionario)
     {
         Random random = new Random(); //
         int indice;                   //
+        string valorePerDizionario;   //  
     //--------------------------------//
 
         AnsiConsole.Clear();
@@ -256,8 +335,41 @@ static void ScelteSecondarie()
         for (int i = 1; i <= quantitativoElementi ;i++ ) 
         {
             indice = random.Next(0, obj.Count);
+            valorePerDizionario = obj[indice].elemento;
             AnsiConsole.Markup($"[154]-[/] {obj[indice].elemento}[154].[/]\n");
+            CaricaDizionario( chiavePerDizionario, valorePerDizionario);
         }
+        Proseguimento();
+    }
+//------------------------------------------------------------------------------------------------------------------------------------
+    static void CaricaDizionario(string chiave, string valore)
+    {
+        if(tabellaElementi.ContainsKey(chiave)) tabellaElementi[chiave].Add(valore);
+        else tabellaElementi [chiave] = new List<string> {valore};
+    }
+//------------------------------------------------------------------------------------------------------------------------------------
+    static void CreaProgetto()
+    {
+        string path;          //
+        DateTime giorno;      //
+        string oggi;          //
+    //------------------------//
+                    // Denomina un file json con data e ora corrente
+        giorno = DateTime.Now;
+        oggi = giorno.ToString("dd-MM-yyyy-HHHH-mm-ss");
+        path = (@"progetti/"+ oggi + ".json");
+                    // Crea il file json 
+        File.Create(path).Close();
+        string jsonString = JsonConvert.SerializeObject(tabellaElementi, Formatting.Indented);
+        File.AppendAllText(path, jsonString + ",\n"); // Aggiunge , anche a fine file
+
+        string file = File.ReadAllText(path);
+                    // Toglie , a fine file per evitare l'errore
+        file = file.Remove(file.Length - 2, 1); 
+        File.WriteAllText(path,file);
+
+        AnsiConsole.Markup("[147]Il progetto è stato creato correttamente :red_exclamation_mark::red_exclamation_mark::file_cabinet:[/]");
+
         Proseguimento();
     }
 }
