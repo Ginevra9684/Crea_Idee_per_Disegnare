@@ -250,11 +250,9 @@ static void MenuFinale()
             .MoreChoicesText("Spostati con le frecce direzionali.")
             .AddChoices(new[] {"[86]1.[/] tabellaElementi Dati [86].[/]","[85]2.[/] Progetti [85].[/]","[49]3.[/] Nuovo Progetto [49].[/]","[79]4.[/] Esci [79].[/]"   // Quattro opzioni
             }));
-
         switch (input)
         {               // Stampa tutte le chiavi e i valori del dizionario
             case "[86]1.[/] tabellaElementi Dati [86].[/]":
-
                 foreach (var elemento in tabellaElementi)
                 {
                     Console.WriteLine($"{elemento.Key} : {string.Join(", ", elemento.Value)}");
@@ -262,15 +260,25 @@ static void MenuFinale()
                 Proseguimento();
                 MenuFinale();
                 break;
-
             case "[85]2.[/] Progetti [85].[/]":
-
-                            //NAVIGAZIONE ALL'INTERNO DELLA CARTELLA "PROGETTI"
-                            //POSSIBILITà DI SELEZIONARE UN PROGETTO SPECIFICO
-                            //IL PROGETTO DEVE POTER MOSTRARE IL CONTENUTO IN TABELLA E POTER ELIMINARE IL PROGETTO STESSO
-
-
-
+                input = AnsiConsole.Prompt(
+                new SelectionPrompt<string>()
+                    .Title("<-<-<-[50]GESTIONALE[/]->->->")
+                    .PageSize(4)
+                    .MoreChoicesText("Spostati con le frecce direzionali.")
+                    .AddChoices(new[] {"[86]1.[/] Salva progetto corrente [86].[/]","[85]2.[/] Scarta progetto corrente [85].[/]"
+                    }));
+                switch (input)
+                {
+                    case "[86]1.[/] Salva progetto corrente [86].[/]" :
+                        CreaProgetto();
+                        BrowserProgetti();
+                        break;
+                    case "[85]2.[/] Scarta progetto corrente [85].[/]" :    
+                        tabellaElementi.Clear();
+                        BrowserProgetti();
+                        break;
+                }
                 break;
             case "[49]3.[/] Nuovo Progetto [49].[/]":
                 input = AnsiConsole.Prompt(
@@ -285,7 +293,6 @@ static void MenuFinale()
                     case "[86]1.[/] Salva progetto corrente [86].[/]" :
                                     // Inserisce gli elementi del dizionario in un file json
                         CreaProgetto();
-                        tabellaElementi.Clear();
                         break;
                     case "[85]2.[/] Scarta progetto corrente [85].[/]" :    tabellaElementi.Clear();
                         break;
@@ -369,7 +376,41 @@ static void MenuFinale()
         File.WriteAllText(path,file);
 
         AnsiConsole.Markup("[147]Il progetto è stato creato correttamente :red_exclamation_mark::red_exclamation_mark::file_cabinet:[/]");
-
+        tabellaElementi.Clear();
         Proseguimento();
+    }
+//------------------------------------------------------------------------------------------------------------------------------------
+    static void BrowserProgetti()
+    {
+            // Percorso della cartella
+        string cartella = @".\progetti";
+                    // Richiama solo i file .json
+        string[] files = Directory.GetFiles(cartella,"*.json");
+
+        if (files.Length == 0)
+        {
+            Console.WriteLine("Non ci sono file JSON nella cartella");
+            return;
+        }
+        Console.WriteLine("Elenco dei file JSON: ");
+        for (int i = 0; i < files.Length; i++)
+        {
+            Console.WriteLine($"{i +1}. {Path.GetFileName(files[i])}"); // Stampa il nome del file con il numero di indice
+        }
+
+        Console.WriteLine("Quale file vuoi legere? (Inserisci il numero corrispondente): ");
+        if (int.TryParse(Console.ReadLine(), out int scelta) && scelta > 0 && scelta <= files.Length)
+        {
+            string fileScelto = files[scelta -1];   // Assegna il file scelto in base all'indice
+            string json = File.ReadAllText(fileScelto); // Legge il contenuto del file
+            dynamic obj = JsonConvert.DeserializeObject(json);  // Deserializza il contenuto in un oggetto dinamico
+            Console.WriteLine(JsonConvert.SerializeObject(obj, Formatting.Indented));   // Stampa il contenuto formattato
+        }
+        else
+        {
+            Errore();
+        }
+        Proseguimento();
+        MenuFinale();
     }
 }
