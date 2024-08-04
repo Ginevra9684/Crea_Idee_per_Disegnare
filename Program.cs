@@ -121,6 +121,7 @@ static void PreferenzaSoggetto()
             case "[86]1.[/]Umano[86].[/]":
                 AnsiConsole.Clear();
                 Console.WriteLine($"Il soggetto sarà umano");
+                CaricaDizionario("soggetto", "umano");
                 Proseguimento();
                 break;
             case "[85]2.[/]Animale[85].[/]":    ScaricaElemento(@"caricamenti/animali.json", "L'animale sarà: ", 1, "animale");
@@ -187,6 +188,7 @@ static void PreferenzaSoggetto()
                 break;
             case "[85]2.[/]Doppio Soggetto" :
                 AnsiConsole.Markup("[97]-[/]Il primo soggetto sarà umano il secondo sarà sorteggiato casualmente\n");
+                CaricaDizionario("soggetto", "umano +");
                 Proseguimento();
                 SoggettoCasuale();
                 break;
@@ -206,7 +208,13 @@ static void PreferenzaSoggetto()
 
         switch(soggettoRandom)
         {
-            case 1:     Console.WriteLine("Il soggetto sarà umano");
+            case 1:     
+                Console.WriteLine("Il soggetto sarà umano");
+                if (tabellaElementi.ContainsKey("soggetto"))
+                {
+                    CaricaDizionario("soggetto 2", "umano");
+                }
+                else CaricaDizionario("soggetto", "umano");
                 break;
             case 2:    ScaricaElemento(@"caricamenti/animali.json", "L'animale sarà: ", 1, "animale");
                 break;
@@ -261,63 +269,16 @@ static void MenuFinale()
                 MenuFinale();
                 break;
             case "[85]2.[/] Progetti [85].[/]":
-                input = AnsiConsole.Prompt(
-                new SelectionPrompt<string>()
-                    .Title("<-<-<-[50]GESTIONALE[/]->->->")
-                    .PageSize(4)
-                    .MoreChoicesText("Spostati con le frecce direzionali.")
-                    .AddChoices(new[] {"[86]1.[/] Salva progetto corrente [86].[/]","[85]2.[/] Scarta progetto corrente [85].[/]"
-                    }));
-                switch (input)
-                {
-                    case "[86]1.[/] Salva progetto corrente [86].[/]" :
-                        CreaProgetto();
-                        BrowserProgetti();
-                        break;
-                    case "[85]2.[/] Scarta progetto corrente [85].[/]" :    
-                        tabellaElementi.Clear();
-                        BrowserProgetti();
-                        break;
-                }
+                SalvaScarta();
+                BrowserProgetti();
                 break;
             case "[49]3.[/] Nuovo Progetto [49].[/]":
-                input = AnsiConsole.Prompt(
-                    new SelectionPrompt<string>()
-                        .Title("<-<-<-[50]GESTIONALE[/]->->->")
-                        .PageSize(4)
-                        .MoreChoicesText("Spostati con le frecce direzionali.")
-                        .AddChoices(new[] {"[86]1.[/] Salva progetto corrente [86].[/]","[85]2.[/] Scarta progetto corrente [85].[/]"
-                        }));
-                switch (input)
-                {
-                    case "[86]1.[/] Salva progetto corrente [86].[/]" :
-                                    // Inserisce gli elementi del dizionario in un file json
-                        CreaProgetto();
-                        break;
-                    case "[85]2.[/] Scarta progetto corrente [85].[/]" :    tabellaElementi.Clear();
-                        break;
-                }
+                SalvaScarta();
                 break;
             case "[79]4.[/] Esci [79].[/]":
-                input = AnsiConsole.Prompt(
-                new SelectionPrompt<string>()
-                    .Title("<-<-<-[50]GESTIONALE[/]->->->")
-                    .PageSize(4)
-                    .MoreChoicesText("Spostati con le frecce direzionali.")
-                    .AddChoices(new[] {"[86]1.[/] Salva progetto corrente [86].[/]","[85]2.[/] Scarta progetto corrente [85].[/]"
-                    }));
-                switch (input)
-                {
-                    case "[86]1.[/] Salva progetto corrente [86].[/]" :
-                        CreaProgetto();
-                        Conclusione();
-                        progettando = false;
-                        break;
-                    case "[85]2.[/] Scarta progetto corrente [85].[/]" :    
-                        Conclusione();
-                        progettando = false;
-                        break;
-                }
+                SalvaScarta();
+                Conclusione();
+                progettando = false;
                 break;
         }
     }
@@ -412,5 +373,30 @@ static void MenuFinale()
         }
         Proseguimento();
         MenuFinale();
+    }
+//------------------------------------------------------------------------------------------------------------------------------------
+    static void SalvaScarta()
+    {
+        string input; //
+    //----------------//
+        if(tabellaElementi.Count != 0)
+        {
+            input = AnsiConsole.Prompt(
+                new SelectionPrompt<string>()
+                    .Title("<-<-<-[50]MEMORIA[/]->->->")
+                    .PageSize(4)
+                    .MoreChoicesText("Spostati con le frecce direzionali.")
+                    .AddChoices(new[] {"[86]1.[/] Salva progetto corrente [86].[/]","[85]2.[/] Scarta progetto corrente [85].[/]"
+                    }));
+                switch (input)
+                {
+                    case "[86]1.[/] Salva progetto corrente [86].[/]" :
+                        CreaProgetto();
+                        break;
+                    case "[85]2.[/] Scarta progetto corrente [85].[/]" :    
+                        tabellaElementi.Clear();
+                        break;
+                }
+        }
     }
 }
