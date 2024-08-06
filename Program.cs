@@ -16,7 +16,6 @@ class Program
         {
             AnsiConsole.Clear();
             AnsiConsole.Markup("[50]IDEE PER ILLUSTRAZIONI[/]:artist_palette:\n\n");
-
             Avvertimenti();
             MenuPrincipale(); 
             ScelteSecondarie();
@@ -263,12 +262,7 @@ static void MenuFinale()
         switch (input)
         {               // Stampa tutte le chiavi e i valori del dizionario
             case "[86]1.[/] Tabella Corrente [86].[/]":
-                foreach (var elemento in tabellaElementi)
-                {
-                    Console.WriteLine($"{elemento.Key} : {string.Join(", ", elemento.Value)}");
-                }
-                if (tabellaElementi.Count == 0)  AnsiConsole.Markup(":clipboard: [147]Nessun progetto attualmente in linea:red_exclamation_mark:\n[/]");
-                Proseguimento();
+                VisualizzaTabella();
                 MenuFinale();
                 break;
             case "[85]2.[/] Progetti [85].[/]":
@@ -277,6 +271,7 @@ static void MenuFinale()
                 break;
             case "[49]3.[/] Nuovo Progetto [49].[/]":
                 SalvaScarta();
+
                 break;
             case "[79]4.[/] Esci [79].[/]":
                 SalvaScarta();
@@ -301,13 +296,13 @@ static void MenuFinale()
 
         indice = random.Next(0,obj.Count);
 
-        AnsiConsole.Markup($":backhand_index_pointing_right: {messaggio} [154]:[/]\n\n");;
+        AnsiConsole.Markup($":backhand_index_pointing_right: {messaggio} [6]:[/]\n\n");;
 
         for (int i = 1; i <= quantitativoElementi ;i++ ) 
         {
             indice = random.Next(0, obj.Count);
             valorePerDizionario = obj[indice].elemento;
-            AnsiConsole.Markup($"[6]-[/] {obj[indice].elemento}[154].[/]\n");
+            AnsiConsole.Markup($"[6]-[/] {obj[indice].elemento}[6].[/]\n");
             CaricaDizionario( chiavePerDizionario, valorePerDizionario);
         }
         Proseguimento();
@@ -341,7 +336,6 @@ static void MenuFinale()
 
         AnsiConsole.Markup("[147]Il progetto è stato creato correttamente :red_exclamation_mark::red_exclamation_mark::file_cabinet:[/]\n");
         tabellaElementi.Clear();
-        Proseguimento();
     }
 //------------------------------------------------------------------------------------------------------------------------------------
     static void BrowserProgetti()
@@ -353,41 +347,38 @@ static void MenuFinale()
 
         if (files.Length == 0)
         {
-            Console.WriteLine("Non ci sono file JSON nella cartella");
-            return;
-        }
-        AnsiConsole.Markup("[50]Elenco dei file JSON[/]: \n\n");
-        for (int i = 0; i < files.Length; i++)
-        {
-            Console.WriteLine($"{i +1}. {Path.GetFileName(files[i])}"); // Stampa il nome del file con il numero di indice
-        }
-
-        Console.WriteLine("Quale file vuoi legere? (Inserisci il numero corrispondente): ");
-        if (int.TryParse(Console.ReadLine(), out int scelta) && scelta > 0 && scelta <= files.Length)
-        {
-            Console.Clear();
-            fileScelto = files[scelta -1];   // Assegna il file scelto in base all'indice
-            string json = File.ReadAllText(fileScelto); // Legge il contenuto del file
-
-                        // Deserializza il file json dividendo il contenuto tra chiavi ed elementi del dizionario
-            tabellaElementi = JsonConvert.DeserializeObject<Dictionary<string, List<string>>>(json)!;
-            foreach (var elemento in tabellaElementi)
-                {
-                    Console.WriteLine($"{elemento.Key} : {string.Join(", ", elemento.Value)}");
-                }
-            
-            Proseguimento();
-            Console.WriteLine("Desideri eliminare il file corrente? (s/n)");
-            string? cancella = Console.ReadLine();
-            if (cancella == "s")
-            {
-                File.Delete(fileScelto);
-                AnsiConsole.Markup(":red_exclamation_mark: [147]Il file è stato eliminato correttamente[/]\n");
-            }
+            AnsiConsole.Markup("\n [147]Non ci sono file JSON nella cartella:red_exclamation_mark:[/]\n");
         }
         else
         {
-            Errore();
+            AnsiConsole.Markup("[50]Elenco dei file JSON[/]: \n\n");
+            for (int i = 0; i < files.Length; i++)
+            {
+                AnsiConsole.Markup($"[6]{i +1}.[/] {Path.GetFileName(files[i])}[6].[/]\n"); // Stampa il nome del file con il numero di indice
+            }
+
+            AnsiConsole.Markup("\nQuale file vuoi legere? ([216]Inserisci[/] il [216]numero[/] corrispondente): \n");
+            if (int.TryParse(Console.ReadLine(), out int scelta) && scelta > 0 && scelta <= files.Length)
+            {
+                Console.Clear();
+                fileScelto = files[scelta -1];   // Assegna il file scelto in base all'indice
+                string json = File.ReadAllText(fileScelto); // Legge il contenuto del file
+
+                            // Deserializza il file json dividendo il contenuto tra chiavi ed elementi del dizionario
+                tabellaElementi = JsonConvert.DeserializeObject<Dictionary<string, List<string>>>(json)!;
+                VisualizzaTabella();
+                Console.WriteLine("Desideri eliminare il file corrente? (s/n)");
+                string? cancella = Console.ReadLine();
+                if (cancella == "s")
+                {
+                    File.Delete(fileScelto);
+                    AnsiConsole.Markup(":red_exclamation_mark: [147]Il file è stato eliminato correttamente[/]\n");
+                }
+            }
+            else
+            {
+                Errore();
+            }
         }
         Proseguimento();
         tabellaElementi.Clear();
@@ -418,5 +409,45 @@ static void MenuFinale()
                 }
             Proseguimento();
         }
+    }
+//------------------------------------------------------------------------------------------------------------------------------------
+    static void VisualizzaTabella()
+    {
+                    // Frase di caricamento con animazione
+        AnsiConsole.Status()
+            .Start("[75]Caricamento progetto[/]", ctx => 
+            {
+                ctx.Spinner(Spinner.Known.Point);
+                ctx.SpinnerStyle(Style.Parse("69"));
+                Thread.Sleep(2000);
+            });
+
+        if (tabellaElementi.Count == 0)  AnsiConsole.Markup(":clipboard: [147]Nessun progetto attualmente in linea:red_exclamation_mark:\n[/]");
+        else
+        {
+                        // Visualizazzione contenuto dizionario a tabella
+            var table = new Table();
+            AnsiConsole.Live(table)
+                .Start(ctx =>
+                {
+                    table.Border(TableBorder.Rounded);
+                    table.Centered();
+
+                                // Chiave dizionario
+                    table.AddColumn("[50]Classe[/]");
+                    ctx.Refresh();
+                    Thread.Sleep(500);
+
+                                // Valore dizionario
+                    table.AddColumn(new TableColumn("[6]Elemento[/]"));
+                    ctx.Refresh();
+                    Thread.Sleep(500);
+                foreach (var elemento in tabellaElementi)
+                {
+                    table.AddRow($"[50]-[/]{elemento.Key}", $"[6]: [/]{string.Join("[6],[/] ", elemento.Value)}");
+                }
+                });
+        }
+        Proseguimento();
     }
 }
