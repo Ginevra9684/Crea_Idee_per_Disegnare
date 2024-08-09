@@ -1,21 +1,21 @@
 [
     {
-        "elemento" : "dog"
+        "elemento" : "cane"
     },
 
     {
-        "elemento" : "cat"
+        "elemento" : "gatto"
     },
 
     {
-        "elemento" : "fish"
+        "elemento" : "pesce"
     },
 
     {
-        "elemento" : "magpie"
+        "elemento" : "gazza ladra"
     },
 
     {
-        "elemento" : "horse"
+        "elemento" : "cavallo"
     }
 ]
