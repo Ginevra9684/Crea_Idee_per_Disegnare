@@ -21,5 +21,29 @@
 
     {
         "elemento" : "Sci-fi"
+    },
+
+    {
+        "elemento" : "Western"
+    },
+
+    {
+        "elemento" : "Apocalyptic"
+    },
+
+    {
+        "elemento" : "Futuristic"
+    },
+
+    {
+        "elemento" : "comedy"
+    },
+
+    {
+        "elemento" : "action"
+    },
+
+    {
+        "elemento" : "thriller"
     }
 ]

@@ -17,5 +17,81 @@
 
     {
         "elemento" : "swamps"
+    },
+
+    {
+        "elemento" : "airport"
+    },
+
+    {
+        "elemento" : "theatre"
+    },
+
+    {
+        "elemento" : "beach"
+    },
+
+    {
+        "elemento" : "port"
+    },
+
+    {
+        "elemento" : "hill"
+    },
+
+    {
+        "elemento" : "river"
+    },
+
+    {
+        "elemento" : "lake"
+    },
+
+    {
+        "elemento" : "church"
+    },
+
+    {
+        "elemento" : "athenaeum"
+    },
+
+    {
+        "elemento" : "school"
+    },
+
+    {
+        "elemento" : "temple"
+    },
+
+    {
+        "elemento" : "ruins"
+    },
+
+    {
+        "elemento" : "tower"
+    },
+
+    {
+        "elemento" : "alien planet"
+    },
+
+    {
+        "elemento" : "desert"
+    },
+
+    {
+        "elemento" : "cave"
+    },
+
+    {
+        "elemento" : "cliff"
+    },
+
+    {
+        "elemento" : "waterfall"
+    },
+
+    {
+        "elemento" : "island"
     }
 ]

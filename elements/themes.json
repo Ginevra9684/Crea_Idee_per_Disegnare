@@ -12,14 +12,38 @@
     },
 
     {
-        "elemento" : "Adventure"
+        "elemento" : "adventure"
     },
 
     {
-        "elemento" : "Prehistorical"
+        "elemento" : "prehistorical"
     },
 
     {
-        "elemento" : "Sci-fi"
+        "elemento" : "sci-fi"
+    },
+
+    {
+        "elemento" : "Western"
+    },
+
+    {
+        "elemento" : "Apocalyptic"
+    },
+
+    {
+        "elemento" : "Futuristic"
+    },
+
+    {
+        "elemento" : "comedy"
+    },
+
+    {
+        "elemento" : "action"
+    },
+
+    {
+        "elemento" : "thriller"
     }
 ]

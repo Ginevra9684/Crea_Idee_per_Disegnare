@@ -1,5 +1,4 @@
-﻿using System.Diagnostics.SymbolStore;
-using Newtonsoft.Json;  
+﻿using Newtonsoft.Json;  
 
 using Spectre.Console;
 class Program
@@ -7,15 +6,19 @@ class Program
                 // Contenitore per gli elementi selezionati
     static Dictionary <string, List<string>> tabellaElementi = new Dictionary <string, List<string>>();
 
+                // Indica la lingua visualizzata a schermo
     static string? visualizedLanguage;
     static string? fileScelto;
+
+    static string? path;
 
                 //  Booleano per far ripartire un nuovo progetto finchè non si setta a falso
     static bool progettando = true;
     public static void Main(string[] args)
     {
+                    // Serve a cambiare la lingua visualizzata
         string language;  //
-    //-----------------//
+    //--------------------//
 
         Console.Clear();
 
@@ -62,28 +65,29 @@ class Program
 
     static void Avvertimenti()
     {
-        AnsiConsole.Markup("[204]REGOLE ED AVVERTIMENTI[/]\n");
-        AnsiConsole.Markup("[208]1.[/]I nomi di animali, creature e temi saranno scritti in inglese per convenzione[208].[/]:anger_symbol:\n");
-        AnsiConsole.Markup("[208]2.[/]Se si fa un inserimento sbagliato l'opzione darà errore o/e verrà saltata[208].[/]:cross_mark:\n");
+        if (visualizedLanguage == "ita") AnsiConsole.Markup("[208]-[/]Se si fa un inserimento sbagliato l'opzione darà errore o/e verrà saltata[208].[/]:cross_mark:\n");
+        if (visualizedLanguage == "eng") AnsiConsole.Markup("[208]-[/]Pay attention to your choices: a wrong choice may cause an error or skip certain options[208].[/]:cross_mark:\n");
         Proseguimento();
     }
 //----------------------------------------------------------------------------------------------------------------------------------
     static void Proseguimento()
     {
-        AnsiConsole.Markup("\n:red_exclamation_mark:Premere un tasto per proseguire[221].[/][222].[/][223].[/]");
+        if (visualizedLanguage == "ita") AnsiConsole.Markup("\n:red_exclamation_mark:Premere un tasto per proseguire[221].[/][222].[/][223].[/]");
+        if (visualizedLanguage == "eng") AnsiConsole.Markup("\n:red_exclamation_mark:Press anything to continue[221].[/][222].[/][223].[/]");
         Console.ReadKey();
         AnsiConsole.Clear();
     }
 //--------------------------------------------------------------------------------------------------------------------------------------
     static void Conclusione()
     {               
-        AnsiConsole.Markup(":blowfish: Ora dovresti avere tutto l'occorrente per iniziare il tuo progetto\n");
-        AnsiConsole.Markup(":backhand_index_pointing_down: Di seguito alcuni siti/app dove poter pubblicare le tue opere : \n");
+        if (visualizedLanguage == "ita") AnsiConsole.Markup(":blowfish: Ora dovresti avere tutto l'occorrente per iniziare il tuo progetto\n");
+        if (visualizedLanguage == "eng") AnsiConsole.Markup(":blowfish: Now you should have everything needed to start your project\n");
     }
 //-------------------------------------------------------------------------------------------------------------------------------
     static void Errore()
     {
-        AnsiConsole.Markup(":red_circle:Opzione non valida\n");
+        if (visualizedLanguage == "ita") AnsiConsole.Markup(":red_circle:Opzione non valida\n");
+        if (visualizedLanguage == "eng") AnsiConsole.Markup(":red_circle:Not a valid option\n");
     }
 
 // FUNZIONI PER MENU E SOTTOMENU------------------------------------------------------------------------------------------------------
@@ -228,8 +232,7 @@ static void PreferenzaSoggetto()
                 break;
         }
     }
-
-// METODI PER SCELTE RANDOM ------------------------------------------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------------------------------------------------------
     static void SoggettoCasuale()
     {
         Random random = new Random(); //
@@ -244,10 +247,8 @@ static void PreferenzaSoggetto()
         {
             case 1:     
                 Console.WriteLine("Il soggetto sarà umano");
-                if (tabellaElementi.ContainsKey("soggetto"))
-                {
-                    CaricaDizionario("soggetto 2", "umano");
-                }
+                if (tabellaElementi.ContainsKey("soggetto")) CaricaDizionario("soggetto 2", "umano");
+
                 else CaricaDizionario("soggetto", "umano");
                 break;
             case 2:    ScaricaElemento(@"caricamenti/animali.json", "L'animale sarà: ", 1, "animale");
@@ -312,7 +313,7 @@ static void PreferenzaSoggetto()
         }
     }
 
-// FUNZIONE PER ESTRAPOLARE GLI ELEMENTI DAI FILE JSON--------------------------------------------------------------------------------
+// FUNZIONI PER LAVORARE CON FILE JSON--------------------------------------------------------------------------------
 
     static void ScaricaElemento(string path, string messaggio, int quantitativoElementi, string chiavePerDizionario)
     {
@@ -330,14 +331,13 @@ static void PreferenzaSoggetto()
         AnsiConsole.Markup($":backhand_index_pointing_right: {messaggio} [6]:[/]\n\n");;
 
         for (int i = 1; i <= quantitativoElementi ;i++ ) 
-        {
+        {          
             indice = random.Next(0, obj.Count);
             valorePerDizionario = obj[indice].elemento;
             AnsiConsole.Markup($"[6]-[/] {obj[indice].elemento}[6].[/]\n");
             CaricaDizionario( chiavePerDizionario, valorePerDizionario);
         }
-        if (visualizedLanguage == "ita") Proseguimento();
-        else if (visualizedLanguage == "eng") KeepGoing();
+        Proseguimento();
     }
 //------------------------------------------------------------------------------------------------------------------------------------
     static void CaricaDizionario(string chiave, string valore)
@@ -348,14 +348,15 @@ static void PreferenzaSoggetto()
 //------------------------------------------------------------------------------------------------------------------------------------
     static void CreaProgetto()
     {
-        string path;          //
         DateTime giorno;      //
         string oggi;          //
     //------------------------//
                     // Denomina un file json con data e ora corrente
         giorno = DateTime.Now;
         oggi = giorno.ToString("dd-MM-yyyy-HHHH-mm-ss");
-        path = (@"progetti/"+ oggi + ".json");
+
+        if (visualizedLanguage == "ita") path = (@"progetti/ITA-"+ oggi + ".json");
+        if (visualizedLanguage == "eng") path = (@"progetti/ENG-"+ oggi + ".json");
                     // Crea il file json 
         File.Create(path).Close();
         string jsonString = JsonConvert.SerializeObject(tabellaElementi, Formatting.Indented);
@@ -418,21 +419,14 @@ static void PreferenzaSoggetto()
             }
             else
             {
-                if (visualizedLanguage == "ita") Errore();
-                else if (visualizedLanguage == "eng") Error();
+                Errore();
             }
             tabellaElementi.Clear();
         }
-        if (visualizedLanguage == "ita") 
-        {
-            Proseguimento();
-            MenuFinale();
-        }
-        else if (visualizedLanguage == "eng") 
-        {
-            KeepGoing();
-            FinalMenu();
-        }
+        Proseguimento();
+        if (visualizedLanguage == "ita") MenuFinale();
+
+        else if (visualizedLanguage == "eng") FinalMenu();
     }
 //------------------------------------------------------------------------------------------------------------------------------------
     static void SalvaScarta()
@@ -504,8 +498,7 @@ static void PreferenzaSoggetto()
                 }
                 });
         }
-        if (visualizedLanguage == "ita") Proseguimento();
-        else if (visualizedLanguage == "eng") KeepGoing();
+        Proseguimento();
     }
 
 //------------------------------------------------------------------------------------------------------------------------------------
@@ -517,26 +510,14 @@ static void PreferenzaSoggetto()
         {
             AnsiConsole.Clear();
             AnsiConsole.Markup("[50]IDEAS FOR ILLUSTRATIONS[/]:artist_palette:\n\n");
-            AnsiConsole.Markup("[208]2.[/]Pay attention to your choices: a wrong choice may cause an error or skip certain options[208].[/]:cross_mark:\n");
-            KeepGoing();
+            Avvertimenti();
             MainMenu(); 
             SecondaryChoices();
             FinalMenu(); 
         }
         while (progettando);
     }
-//------------------------------------------------------------------------------------------------------------------------------------
-    static void KeepGoing()
-    {
-        AnsiConsole.Markup("\n:red_exclamation_mark:Press anything to continue[221].[/][222].[/][223].[/]");
-        Console.ReadKey();
-        AnsiConsole.Clear();
-    }
-//------------------------------------------------------------------------------------------------------------------------------------
-    static void Error()
-    {
-        AnsiConsole.Markup(":red_circle:Not a valid option\n");
-    }
+
 //METHODS FOR MENU--------------------------------------------------------------------------------------------------------------------
     static void MainMenu()
     {
@@ -673,7 +654,7 @@ static void PreferenzaSoggetto()
             case "[85]2.[/]Double Subject" :
                 AnsiConsole.Markup("[97]-[/]The first subject will be human and the second will be drawn casually\n");
                 CaricaDizionario("subject", "human +");
-                KeepGoing();
+                Proseguimento();
                 RandomSubject();
                 break;
         }
@@ -704,7 +685,7 @@ static void PreferenzaSoggetto()
             case 3:    CreatureType();
                 break;
         }
-        if (randomSubject != 2 & randomSubject != 3 )    KeepGoing();
+        if (randomSubject != 2 & randomSubject != 3 )    Proseguimento();
     }
 //------------------------------------------------------------------------------------------------------------------------------------
     static void SecondaryChoices()
@@ -755,7 +736,7 @@ static void PreferenzaSoggetto()
                 break;
             case "[79]4.[/] Exit [79].[/]":
                 SaveDiscard();
-                AnsiConsole.Markup(":blowfish: Now you should have everything needed to start your project\n");
+                Conclusione();
                 progettando = false;
                 break;
         }
@@ -783,7 +764,7 @@ static void PreferenzaSoggetto()
                         tabellaElementi.Clear();
                         break;
                 }
-            KeepGoing();
+            Proseguimento();
         }
     }
 }
