@@ -75,19 +75,8 @@
         "elemento" : "ringtail possum"
     },
 
-
-
-
-
-
-
-
-
-
-
-    
     {
-        "elemento" : "canguro arboricolo"
+        "elemento" : "tree kangaroo"
     },
 
     {
@@ -99,7 +88,7 @@
     },
 
     {
-        "elemento" : "canguro"
+        "elemento" : "kangaroo"
     },
 
     {
@@ -107,7 +96,7 @@
     },
 
     {
-        "elemento" : "petrogale"
+        "elemento" : "rock-wallaby"
     },
 
     {
@@ -115,15 +104,15 @@
     },
 
     {
-        "elemento" : "istrice"
+        "elemento" : "porcupine"
     },
 
     {
-        "elemento" : "ratto delle rocce"
+        "elemento" : "hyrax"
     },
 
     {
-        "elemento" : "cavia"
+        "elemento" : "guinea pig"
     },
 
     {
@@ -139,15 +128,15 @@
     },
 
     {
-        "elemento" : "capibara"
+        "elemento" : "capybara"
     },
 
     {
-        "elemento" : "moco"
+        "elemento" : "rock cavy"
     },
 
     {
-        "elemento" : "aguti"
+        "elemento" : "agouti"
     },
 
     {
@@ -167,7 +156,7 @@
     },
 
     {
-        "elemento" : "ursone"
+        "elemento" : "canadian porcupine"
     },
 
     {
@@ -175,7 +164,7 @@
     },
 
     {
-        "elemento" : "castoro"
+        "elemento" : "beaver"
     },
 
     {
@@ -187,15 +176,15 @@
     },
 
     {
-        "elemento" : "sicista"
+        "elemento" : "birch mouse"
     },
 
     {
-        "elemento" : "topo saltatore dei boschi"
+        "elemento" : "woodland jumping mouse"
     },
 
     {
-        "elemento" : "topo delle piramidi"
+        "elemento" : "lesser jerboa"
     },
 
     {
@@ -203,27 +192,27 @@
     },
 
     {
-        "elemento" : "arvicola"
+        "elemento" : "water vole"
     },
 
     {
-        "elemento" : "topo muschiato"
+        "elemento" : "muskrat"
     },
 
     {
-        "elemento" : "criceto"
+        "elemento" : "hamster"
     },
 
     {
-        "elemento" : "peromisco"
+        "elemento" : "peromyscus"
     },
 
     {
-        "elemento" : "gerbillo"
+        "elemento" : "gerbil"
     },
 
     {
-        "elemento" : "cricetomys"
+        "elemento" : "giant pouched rat"
     },
 
     {
@@ -231,15 +220,15 @@
     },
 
     {
-        "elemento" : "ghiro"
+        "elemento" : "dormouse"
     },
 
     {
-        "elemento" : "spalace"
+        "elemento" : "lesser blind mole-rat"
     },
 
     {
-        "elemento" : "muscardinus"
+        "elemento" : "hazel dormouse"
     },
 
     {
@@ -247,43 +236,43 @@
     },
 
     {
-        "elemento" : "scoiattolo"
+        "elemento" : "squirrel"
     },
 
     {
-        "elemento" : "scoiattolo volante"
+        "elemento" : "flying squirrel"
     },
 
     {
-        "elemento" : "citello"
+        "elemento" : "european ground squirrel"
     },
 
     {
-        "elemento" : "cane della prateria"
+        "elemento" : "prairie dog"
     },
 
     {
-        "elemento" : "tamia"
+        "elemento" : "chipmunk"
     },
 
     {
-        "elemento" : "xero"
+        "elemento" : "unstriped ground squirrel"
     },
 
     {
-        "elemento" : "marmotta"
+        "elemento" : "marmot"
     },
 
     {
-        "elemento" : "coniglio"
+        "elemento" : "rabbit"
     },
 
     {
-        "elemento" : "lepre"
+        "elemento" : "hare"
     },
 
     {
-        "elemento" : "pica"
+        "elemento" : "pika"
     },
 
     {
@@ -295,23 +284,23 @@
     },
 
     {
-        "elemento" : "chirogaleo"
+        "elemento" : "hairy-eared dwarf lemur"
     },
 
     {
-        "elemento" : "microcebo"
+        "elemento" : "mouse lemur"
     },
 
     {
-        "elemento" : "lemure"
+        "elemento" : "lemur"
     },
 
     {
-        "elemento" : "lepilemure"
+        "elemento" : "lepilemur"
     },
 
     {
-        "elemento" : "apalemure"
+        "elemento" : "golden bamboo lemur"
     },
 
     {
@@ -319,7 +308,7 @@
     },
 
     {
-        "elemento" : "avahi"
+        "elemento" : "woolly lemur"
     },
 
     {
@@ -331,7 +320,7 @@
     },
 
     {
-        "elemento" : "galagone"
+        "elemento" : "galago"
     },
 
     {
@@ -339,7 +328,7 @@
     },
 
     {
-        "elemento" : "falso potto"
+        "elemento" : "false potto"
     },
 
     {
@@ -347,19 +336,19 @@
     },
 
     {
-        "elemento" : "tarsio"
+        "elemento" : "tarsius"
     },
 
     {
-        "elemento" : "uistiti"
+        "elemento" : "callithrix"
     },
 
     {
-        "elemento" : "callimico"
+        "elemento" : "goeldi's marmoset"
     },
 
     {
-        "elemento" : "tamarino"
+        "elemento" : "tamarin"
     },
 
     {
@@ -371,83 +360,79 @@
     },
 
     {
-        "elemento" : "aoto"
+        "elemento" : "northern owl monkey"
     },
 
     {
-        "elemento" : "callicebo"
+        "elemento" : "callicebus"
     },
 
     {
-        "elemento" : "chiropote"
+        "elemento" : "black bearded saki"
     },
 
     {
-        "elemento" : "pitecia"
+        "elemento" : "saki monkey"
     },
 
     {
-        "elemento" : "aluatta"
+        "elemento" : "howler monkey"
     },
 
     {
-        "elemento" : "atele"
+        "elemento" : "spider monkey"
     },
 
     {
-        "elemento" : "scimmia lanosa"
+        "elemento" : "woolly monkey"
     },
 
     {
-        "elemento" : "cercopiteco"
+        "elemento" : "guenon"
     },
 
     {
-        "elemento" : "eritrocebo"
+        "elemento" : "hussar monkey"
     },
 
     {
-        "elemento" : "cercocebo"
+        "elemento" : "white-eyelid mangabeys"
     },
 
     {
-        "elemento" : "macaco"
+        "elemento" : "macaque"
     },
 
     {
-        "elemento" : "mandrillo"
+        "elemento" : "mandrill"
     },
 
     {
-        "elemento" : "colobo"
+        "elemento" : "colobi"
     },
 
     {
-        "elemento" : "presbite"
+        "elemento" : "gee's golden langur"
     },
 
     {
-        "elemento" : "entello"
+        "elemento" : "semnopithecus"
     },
 
     {
-        "elemento" : "langur"
+        "elemento" : "golden snub-nosed monkey"
     },
 
     {
-        "elemento" : "rinopiteco"
+        "elemento" : "proboscis monkey"
     },
 
     {
-        "elemento" : "nasica"
+        "elemento" : "gibbon"
     },
 
     {
-        "elemento" : "gibbone"
-    },
-
-    {
-        "elemento" : "orango"
+        "elemento" : "orangutan"
     },
 
     {
@@ -455,19 +440,19 @@
     },
 
     {
-        "elemento" : "scimpanze"
+        "elemento" : "chimpanzee"
     },
 
     {
-        "elemento" : "riccio"
+        "elemento" : "hedgehog"
     },
 
     {
-        "elemento" : "toporagno"
+        "elemento" : "shrew"
     },
 
     {
-        "elemento" : "talpa"
+        "elemento" : "tmole"
     },
 
     {
@@ -483,7 +468,7 @@
     },
 
     {
-        "elemento" : "vigogna"
+        "elemento" : "vicuna"
     },
 
     {
@@ -491,47 +476,47 @@
     },
 
     {
-        "elemento" : "cammello"
+        "elemento" : "cammel"
     },
 
     {
-        "elemento" : "dromedario"
+        "elemento" : "dromedary"
     },
 
     {
-        "elemento" : "babirussa"
+        "elemento" : "buru babirusa"
     },
 
     {
-        "elemento" : "ilochero"
+        "elemento" : "giant forest hog"
     },
 
     {
-        "elemento" : "potamochero"
+        "elemento" : "red river hog"
     },
 
     {
-        "elemento" : "cinghiale"
+        "elemento" : "boar"
     },
 
     {
-        "elemento" : "facocero"
+        "elemento" : "common warthog"
     },
 
     {
-        "elemento" : "pècari"
+        "elemento" : "peccary"
     },
 
     {
-        "elemento" : "balena"
+        "elemento" : "whale"
     },
 
     {
-        "elemento" : "balenottera"
+        "elemento" : "rorqual"
     },
 
     {
-        "elemento" : "delfino"
+        "elemento" : "dolphin"
     },
 
     {
@@ -539,7 +524,7 @@
     },
 
     {
-        "elemento" : "susa"
+        "elemento" : "sousa"
     },
 
     {
@@ -547,19 +532,19 @@
     },
 
     {
-        "elemento" : "tursiope"
+        "elemento" : "bottlenose dolphin"
     },
 
     {
-        "elemento" : "cefalorinco"
+        "elemento" : "hector's dolphin"
     },
 
     {
-        "elemento" : "lagenorinco"
+        "elemento" : "lagenorhynchus"
     },
 
     {
-        "elemento" : "globicefalo"
+        "elemento" : "long-finned pilot whale"
     },
 
     {
@@ -575,95 +560,95 @@
     },
 
     {
-        "elemento" : "lipote"
+        "elemento" : "baiji"
     },
 
     {
-        "elemento" : "focena"
+        "elemento" : "harbour porpoise"
     },
 
     {
-        "elemento" : "beluga"
+        "elemento" : "beluga whale"
     },
 
     {
-        "elemento" : "narvalo"
+        "elemento" : "narwhal"
     },
 
     {
-        "elemento" : "capodoglio"
+        "elemento" : "cachalot"
     },
 
     {
-        "elemento" : "ippopotamo"
+        "elemento" : "hippopotamus"
     },
 
     {
-        "elemento" : "tragulo"
+        "elemento" : "mouse-deer"
     },
 
     {
-        "elemento" : "antilocapra"
+        "elemento" : "pronghorn"
     },
 
     {
-        "elemento" : "giraffa"
+        "elemento" : "giraffe"
     },
 
     {
-        "elemento" : "cervo muschiato"
+        "elemento" : "musk deer"
     },
 
     {
-        "elemento" : "alce"
+        "elemento" : "moose"
     },
 
     {
-        "elemento" : "capriolo"
+        "elemento" : "roe deer"
     },
 
     {
-        "elemento" : "mazama"
+        "elemento" : "brocket deer"
     },
 
     {
-        "elemento" : "cervo"
+        "elemento" : "deer"
     },
 
     {
-        "elemento" : "pudu"
+        "elemento" : "southern pudu"
     },
 
     {
-        "elemento" : "renna"
+        "elemento" : "reindeer"
     },
 
     {
-        "elemento" : "wapiti"
+        "elemento" : "elk"
     },
 
     {
-        "elemento" : "sika"
+        "elemento" : "sika deer"
     },
 
     {
-        "elemento" : "daino"
+        "elemento" : "european fallow deer"
     },
 
     {
-        "elemento" : "muntak"
+        "elemento" : "muntjak"
     },
 
     {
-        "elemento" : "tameng"
+        "elemento" : "eld's deer"
     },
 
     {
-        "elemento" : "cervo d'acqua"
+        "elemento" : "water deer"
     },
 
     {
-        "elemento" : "bufalo"
+        "elemento" : "bubalus"
     },
 
     {
@@ -671,7 +656,7 @@
     },
 
     {
-        "elemento" : "anoa"
+        "elemento" : "lowland anoa"
     },
 
     {
@@ -679,11 +664,11 @@
     },
 
     {
-        "elemento" : "vacca"
+        "elemento" : "cow"
     },
 
     {
-        "elemento" : "bisonte"
+        "elemento" : "bison"
     },
 
     {
@@ -695,27 +680,27 @@
     },
 
     {
-        "elemento" : "kudu"
+        "elemento" : "spiral-horned antelope"
     },
 
     {
-        "elemento" : "cefalofo"
+        "elemento" : "duiker"
     },
 
     {
-        "elemento" : "antilope"
+        "elemento" : "antelope"
     },
 
     {
-        "elemento" : "orice"
+        "elemento" : "oryx"
     },
 
     {
-        "elemento" : "gazzella"
+        "elemento" : "gazzelle"
     },
 
     {
-        "elemento" : "udad"
+        "elemento" : "barbary sheep"
     },
 
     {
@@ -723,35 +708,35 @@
     },
 
     {
-        "elemento" : "capra"
+        "elemento" : "goat"
     },
 
     {
-        "elemento" : "stambecco"
+        "elemento" : "alpine ibex"
     },
 
     {
-        "elemento" : "muflone"
+        "elemento" : "european mouflon"
     },
 
     {
-        "elemento" : "pecora"
+        "elemento" : "sheep"
     },
 
     {
-        "elemento" : "bue muschiato"
+        "elemento" : "muskox"
     },
 
     {
-        "elemento" : "capricorno"
+        "elemento" : "serow"
     },
 
     {
-        "elemento" : "goral"
+        "elemento" : "himalayan goral"
     },
 
     {
-        "elemento" : "camoscio"
+        "elemento" : "chamois"
     },
 
     {
@@ -759,35 +744,35 @@
     },
 
     {
-        "elemento" : "tigre"
+        "elemento" : "tiger"
     },
 
     {
-        "elemento" : "leone"
+        "elemento" : "lion"
     },
 
     {
-        "elemento" : "leopardo"
+        "elemento" : "leopard"
     },
 
     {
-        "elemento" : "giaguaro"
+        "elemento" : "jaguar"
     },
 
     {
-        "elemento" : "leopardo nebuloso"
+        "elemento" : "clouded leopard"
     },
 
     {
-        "elemento" : "leopardo delle nevi"
+        "elemento" : "snow leopard"
     },
 
     {
-        "elemento" : "puma"
+        "elemento" : "cougar"
     },
 
     {
-        "elemento" : "ghepardo"
+        "elemento" : "cheetah"
     },
 
     {
@@ -807,23 +792,23 @@
     },
 
     {
-        "elemento" : "gatto"
+        "elemento" : "cat"
     },
 
     {
-        "elemento" : "lince"
+        "elemento" : "lynx"
     },
 
     {
-        "elemento" : "gatto dorato"
+        "elemento" : "asiangolden cat"
     },
 
     {
-        "elemento" : "mangusta"
+        "elemento" : "mongoose"
     },
 
     {
-        "elemento" : "suricato"
+        "elemento" : "meerkat"
     },
 
     {
@@ -831,15 +816,15 @@
     },
 
     {
-        "elemento" : "linsango"
+        "elemento" : "linsang"
     },
 
     {
-        "elemento" : "zibetto"
+        "elemento" : "civet"
     },
 
     {
-        "elemento" : "genetta"
+        "elemento" : "genet"
     },
 
     {
@@ -847,27 +832,27 @@
     },
 
     {
-        "elemento" : "civetta delle palme"
+        "elemento" : "asian palm civet"
     },
 
     {
-        "elemento" : "iena"
+        "elemento" : "hyena"
     },
 
     {
-        "elemento" : "protele"
+        "elemento" : "aardwolf"
     },
 
     {
-        "elemento" : "panda rosso"
+        "elemento" : "red panda"
     },
 
     {
-        "elemento" : "atelocino"
+        "elemento" : "short-eared dog"
     },
 
     {
-        "elemento" : "sciacallo"
+        "elemento" : "jackal"
     },
 
     {
@@ -875,11 +860,11 @@
     },
 
     {
-        "elemento" : "cane"
+        "elemento" : "dog"
     },
 
     {
-        "elemento" : "lupo"
+        "elemento" : "wolf"
     },
 
     {
@@ -887,35 +872,35 @@
     },
 
     {
-        "elemento" : "caberù"
+        "elemento" : "ethiopian wolf"
     },
 
     {
-        "elemento" : "maikong"
+        "elemento" : "crab-eating fox"
     },
 
     {
-        "elemento" : "crisocione"
+        "elemento" : "maned wolf"
     },
 
     {
-        "elemento" : "cuon"
+        "elemento" : "dhole"
     },
 
     {
-        "elemento" : "licaone"
+        "elemento" : "african wild dog"
     },
 
     {
-        "elemento" : "otocione"
+        "elemento" : "bat-eared fox"
     },
 
     {
-        "elemento" : "urocione"
+        "elemento" : "urocyon"
     },
 
     {
-        "elemento" : "volpe"
+        "elemento" : "fox"
     },
 
     {
@@ -923,55 +908,55 @@
     },
 
     {
-        "elemento" : "moffetta"
+        "elemento" : "skunk"
     },
 
     {
-        "elemento" : "tasso"
+        "elemento" : "european badger"
     },
 
     {
-        "elemento" : "lontra"
+        "elemento" : "lotter"
     },
 
     {
-        "elemento" : "grigione"
+        "elemento" : "grison"
     },
 
     {
-        "elemento" : "ghiottone"
+        "elemento" : "wolverine"
     },
 
     {
-        "elemento" : "zorilla"
+        "elemento" : "striped polecat"
     },
 
     {
-        "elemento" : "martora"
+        "elemento" : "european pine marten"
     },
 
     {
-        "elemento" : "donnola"
+        "elemento" : "least weasel"
     },
 
     {
-        "elemento" : "faina"
+        "elemento" : "beech marten"
     },
 
     {
-        "elemento" : "puzzola"
+        "elemento" : "european polecat"
     },
 
     {
-        "elemento" : "furetto"
+        "elemento" : "ferret"
     },
 
     {
-        "elemento" : "visone"
+        "elemento" : "mink"
     },
 
     {
-        "elemento" : "procione"
+        "elemento" : "racoon"
     },
 
     {
@@ -979,7 +964,7 @@
     },
 
     {
-        "elemento" : "bassarisco"
+        "elemento" : "ringtail"
     },
 
     {
@@ -991,23 +976,23 @@
     },
 
     {
-        "elemento" : "tricheco"
+        "elemento" : "warlus"
     },
 
     {
-        "elemento" : "otaria"
+        "elemento" : "eared seal"
     },
 
     {
-        "elemento" : "leone marino"
+        "elemento" : "sea lion"
     },
 
     {
-        "elemento" : "foca"
+        "elemento" : "seal"
     },
 
     {
-        "elemento" : "elefante marino"
+        "elemento" : "elephant seal"
     },
 
     {
@@ -1015,27 +1000,27 @@
     },
 
     {
-        "elemento" : "orso"
+        "elemento" : "bear"
     },
 
     {
-        "elemento" : "pipistrello"
+        "elemento" : "bat"
     },
 
     {
-        "elemento" : "volpe volante"
+        "elemento" : "flying fox"
     },
 
     {
-        "elemento" : "cavallo"
+        "elemento" : "horse"
     },
 
     {
-        "elemento" : "asino"
+        "elemento" : "donkey"
     },
 
     {
-        "elemento" : "emione"
+        "elemento" : "onager"
     },
 
     {
@@ -1043,15 +1028,15 @@
     },
 
     {
-        "elemento" : "tapiro"
+        "elemento" : "tapirus"
     },
 
     {
-        "elemento" : "rinoceronte"
+        "elemento" : "rhinoceros"
     },
 
     {
-        "elemento" : "pangolino"
+        "elemento" : "pangolin"
     },
 
     {
@@ -1059,7 +1044,7 @@
     },
 
     {
-        "elemento" : "formichiere"
+        "elemento" : "anteater"
     },
 
     {
@@ -1067,67 +1052,67 @@
     },
 
     {
-        "elemento" : "bradipo"
+        "elemento" : "three-toed sloth"
     },
 
     {
-        "elemento" : "oritteropo"
+        "elemento" : "aardvark"
     },
 
     {
-        "elemento" : "elefante"
+        "elemento" : "elephant"
     },
 
     {
-        "elemento" : "lamantino"
+        "elemento" : "manatee"
     },
 
     {
-        "elemento" : "dugongo"
+        "elemento" : "dugong"
     },
 
     {
-        "elemento" : "tartaruga alligatore"
+        "elemento" : "alligator turtle"
     },
 
     {
-        "elemento" : "testuggine"
+        "elemento" : "tortoise"
     },
 
     {
-        "elemento" : "terrapin"
+        "elemento" : "diamondback terrapin"
     },
 
     {
-        "elemento" : "tartaruga scatola"
+        "elemento" : "box turtle"
     },
 
     {
-        "elemento" : "tartaruga foglia"
+        "elemento" : "leaf turtle"
     },
 
     {
-        "elemento" : "tartaruga palustre"
+        "elemento" : "pond turtle"
     },
 
     {
-        "elemento" : "tartaruga a tetto"
+        "elemento" : "roofed turtle"
     },
 
     {
-        "elemento" : "tartaruga geografica"
+        "elemento" : "map turtle"
     },
 
     {
-        "elemento" : "tartaruga del muschio"
+        "elemento" : "musk turtle"
     },
 
     {
-        "elemento" : "tartaruga marina"
+        "elemento" : "sea turte"
     },
 
     {
-        "elemento" : "tartaruga liuto"
+        "elemento" : "leatherback sea turtle"
     },
 
     {
@@ -1135,7 +1120,7 @@
     },
 
     {
-        "elemento" : "tartaruga gigante"
+        "elemento" : "giant tortoise"
     },
 
     {
@@ -1147,27 +1132,27 @@
     },
 
     {
-        "elemento" : "stellione"
+        "elemento" : "starred agama"
     },
 
     {
-        "elemento" : "clamidosauro"
+        "elemento" : "frilled lizard"
     },
 
     {
-        "elemento" : "moloch"
+        "elemento" : "thorny devil"
     },
 
     {
-        "elemento" : "drago d'acqua cinese"
+        "elemento" : "chinese water dragon"
     },
 
     {
-        "elemento" : "pogona"
+        "elemento" : "bearded dragon"
     },
 
     {
-        "elemento" : "branchocela"
+        "elemento" : "bronchocela"
     },
 
     {
@@ -1187,19 +1172,19 @@
     },
 
     {
-        "elemento" : "camaleonte"
+        "elemento" : "chameleon"
     },
 
     {
-        "elemento" : "basilisco"
+        "elemento" : "basilisk"
     },
 
     {
-        "elemento" : "lucertola dal collare"
+        "elemento" : "commoncollared lizard"
     },
 
     {
-        "elemento" : "anolide"
+        "elemento" : "anolis"
     },
 
     {
@@ -1207,7 +1192,7 @@
     },
 
     {
-        "elemento" : "microlophus"
+        "elemento" : "lava lizard"
     },
 
     {
@@ -1215,27 +1200,27 @@
     },
 
     {
-        "elemento" : "geco tokay"
+        "elemento" : "tokay gecko"
     },
 
     {
-        "elemento" : "felsuma"
+        "elemento" : "day gecko"
     },
 
     {
-        "elemento" : "geco coda a foglia"
+        "elemento" : "leaf tailed gecko"
     },
 
     {
-        "elemento" : "geco ciliatus"
+        "elemento" : "crested gecko"
     },
 
     {
-        "elemento" : "geco leopardino"
+        "elemento" : "leopard gecko"
     },
 
     {
-        "elemento" : "geco"
+        "elemento" : "gecko"
     },
 
     {
@@ -1243,23 +1228,23 @@
     },
 
     {
-        "elemento" : "algiroide"
+        "elemento" : "blue-throated keeled lizard"
     },
 
     {
-        "elemento" : "eremia"
+        "elemento" : "gobi racerunner"
     },
 
     {
-        "elemento" : "lucertola"
+        "elemento" : "lizard"
     },
 
     {
-        "elemento" : "ramarro"
+        "elemento" : "european green lizard"
     },
 
     {
-        "elemento" : "scinco"
+        "elemento" : "skink"
     },
 
     {
@@ -1283,19 +1268,19 @@
     },
 
     {
-        "elemento" : "lantanoto"
+        "elemento" : "earless monitor lizard"
     },
 
     {
-        "elemento" : "varano"
+        "elemento" : "monitor lizard"
     },
 
     {
-        "elemento" : "drago di komodo"
+        "elemento" : "komodo dragon"
     },
 
     {
-        "elemento" : "anilio corallino"
+        "elemento" : "anilius"
     },
 
     {
@@ -1303,19 +1288,19 @@
     },
 
     {
-        "elemento" : "boa arboricolo"
+        "elemento" : "emerald tree boa"
     },
 
     {
-        "elemento" : "pitone"
+        "elemento" : "pythone"
     },
 
     {
-        "elemento" : "boiga"
+        "elemento" : "cat snake"
     },
 
     {
-        "elemento" : "colubro"
+        "elemento" : "aesculapian snake"
     },
 
     {
@@ -1327,7 +1312,7 @@
     },
 
     {
-        "elemento" : "leptophis"
+        "elemento" : "parrot snake"
     },
 
     {
@@ -1343,39 +1328,39 @@
     },
 
     {
-        "elemento" : "bothriechis"
+        "elemento" : "palm viper"
     },
 
     {
-        "elemento" : "crotalo"
+        "elemento" : "rattlesnake"
     },
 
     {
-        "elemento" : "vipera"
+        "elemento" : "viper"
     },
 
     {
-        "elemento" : "mocassino"
+        "elemento" : "pit viper"
     },
 
     {
-        "elemento" : "serpente"
+        "elemento" : "snake"
     },
 
     {
-        "elemento" : "coccodrillo"
+        "elemento" : "crocodile"
     },
 
     {
-        "elemento" : "osteolemo"
+        "elemento" : "dwarf crocodile"
     },
 
     {
-        "elemento" : "tomistoma"
+        "elemento" : "false gharial"
     },
 
     {
-        "elemento" : "alligatore"
+        "elemento" : "alligator"
     },
 
     {
@@ -1383,43 +1368,43 @@
     },
 
     {
-        "elemento" : "gaviale"
+        "elemento" : "gharial"
     },
 
     {
-        "elemento" : "rana"
+        "elemento" : "frog"
     },
 
     {
-        "elemento" : "rana pacman"
+        "elemento" : "pacman frog"
     },
 
     {
-        "elemento" : "rana foglia"
+        "elemento" : "leaf frog"
     },
 
     {
-        "elemento" : "rana freccia"
+        "elemento" : "dart frog"
     },
 
     {
-        "elemento" : "rana arboricola"
+        "elemento" : "red-eyed tree frog"
     },
 
     {
-        "elemento" : "raganella"
+        "elemento" : "hyla"
     },
 
     {
-        "elemento" : "rospo"
+        "elemento" : "toad"
     },
 
     {
-        "elemento" : "tritone"
+        "elemento" : "newt"
     },
 
     {
-        "elemento" : "salamandra"
+        "elemento" : "salamander"
     },
 
     {
@@ -1427,15 +1412,15 @@
     },
 
     {
-        "elemento" : "razza"
+        "elemento" : "ray"
     },
 
     {
-        "elemento" : "pastinaca"
+        "elemento" : "stingray"
     },
 
     {
-        "elemento" : "manta"
+        "elemento" : "manta ray"
     },
 
     {
@@ -1443,91 +1428,87 @@
     },
 
     {
-        "elemento" : "trigone"
+        "elemento" : "sawfish"
     },
 
     {
-        "elemento" : "pristide"
+        "elemento" : "torpedo"
     },
 
     {
-        "elemento" : "torpedine"
+        "elemento" : "great white shark"
     },
 
     {
-        "elemento" : "squalo binaco"
+        "elemento" : "tiger shark"
     },
 
     {
-        "elemento" : "squalo tigre"
+        "elemento" : "grey nurse shark"
     },
 
     {
-        "elemento" : "squalo toro"
+        "elemento" : "thresher"
     },
 
     {
-        "elemento" : "squalo volpe"
+        "elemento" : "shortfin mako shark"
     },
 
     {
-        "elemento" : "squalo mako"
+        "elemento" : "lemon shark"
     },
 
     {
-        "elemento" : "squalo limone"
+        "elemento" : "angelshark"
     },
 
     {
-        "elemento" : "squatina"
+        "elemento" : "zebra shark"
     },
 
     {
-        "elemento" : "squalo zebra"
+        "elemento" : "nurse shark"
     },
 
     {
-        "elemento" : "nutrice"
+        "elemento" : "whale shark"
     },
 
     {
-        "elemento" : "squalo balena"
+        "elemento" : "basking shark"
     },
 
     {
-        "elemento" : "squalo elefante"
+        "elemento" : "blue shark"
     },
 
     {
-        "elemento" : "verdesca"
+        "elemento" : "small-spotted catshark"
     },
 
     {
-        "elemento" : "gattuccio"
+        "elemento" : "hammerhead shark"
     },
 
     {
-        "elemento" : "squalo martello"
+        "elemento" : "common smooth-hound"
     },
 
     {
-        "elemento" : "palombo"
+        "elemento" : "porbeagle shark"
     },
 
     {
-        "elemento" : "smeriglio"
+        "elemento" : "lungfish"
     },
 
     {
-        "elemento" : "dipnoi"
+        "elemento" : "silver scabbardfish"
     },
 
     {
-        "elemento" : "pesce spatola"
-    },
-
-    {
-        "elemento" : "pesce spada"
+        "elemento" : "swordfish"
     },
 
     {
@@ -1535,7 +1516,7 @@
     },
 
     {
-        "elemento" : "pesce volante"
+        "elemento" : "flying fish"
     },
 
     {
@@ -1543,23 +1524,23 @@
     },
 
     {
-        "elemento" : "pesce scoiattolo"
+        "elemento" : "squirrelfish"
     },
 
     {
-        "elemento" : "pesce chirurgo"
+        "elemento" : "surgeonfish"
     },
 
     {
-        "elemento" : "pesce unicorno"
+        "elemento" : "ray-finned fish"
     },
 
     {
-        "elemento" : "siganus"
+        "elemento" : "rabbitfish"
     },
 
     {
-        "elemento" : "zanclo"
+        "elemento" : "moorish idol"
     },
 
     {
@@ -1567,11 +1548,11 @@
     },
 
     {
-        "elemento" : "pesce combattente"
+        "elemento" : "fighting fish"
     },
 
     {
-        "elemento" : "blennius"
+        "elemento" : "blenny"
     },
 
     {
@@ -1587,27 +1568,27 @@
     },
 
     {
-        "elemento" : "pesce mandarino"
+        "elemento" : "mandarinfish"
     },
 
     {
-        "elemento" : "elassoma"
+        "elemento" : "pygmy sunfish"
     },
 
     {
-        "elemento" : "perioftalmo"
+        "elemento" : "periophthalmus"
     },
 
     {
-        "elemento" : "nemateleotris"
+        "elemento" : "dartfish"
     },
 
     {
-        "elemento" : "ciclide"
+        "elemento" : "cichlid"
     },
 
     {
-        "elemento" : "anampses"
+        "elemento" : "spotted wrass"
     },
 
     {
@@ -1615,11 +1596,11 @@
     },
 
     {
-        "elemento" : "cirrhilabrus"
+        "elemento" : "fairy wrass"
     },
 
     {
-        "elemento" : "coris"
+        "elemento" : "rainbow wrass"
     },
 
     {
@@ -1643,11 +1624,11 @@
     },
 
     {
-        "elemento" : "pesce pagliaccio"
+        "elemento" : "clownfish"
     },
 
     {
-        "elemento" : "pesce farfalla"
+        "elemento" : "butterflifish"
     },
 
     {
@@ -1655,11 +1636,11 @@
     },
 
     {
-        "elemento" : "murena"
+        "elemento" : "moray eel"
     },
 
     {
-        "elemento" : "lampuga"
+        "elemento" : "mahi-mahi"
     },
 
     {
@@ -1675,23 +1656,23 @@
     },
 
     {
-        "elemento" : "pesce ghiaccio"
+        "elemento" : "icefish"
     },
 
     {
-        "elemento" : "sgombro"
+        "elemento" : "mackerel"
     },
 
     {
-        "elemento" : "palamita"
+        "elemento" : "atlantic bonito"
     },
 
     {
-        "elemento" : "tonnetto"
+        "elemento" : "little tuna"
     },
 
     {
-        "elemento" : "tonno"
+        "elemento" : "tuna"
     },
 
     {
@@ -1699,23 +1680,23 @@
     },
 
     {
-        "elemento" : "pesce ago"
+        "elemento" : "greater pipefish"
     },
 
     {
-        "elemento" : "pesce istrice"
+        "elemento" : "porcupinefish"
     },
 
     {
-        "elemento" : "pesce scatola"
+        "elemento" : "longhorn cowfish"
     },
 
     {
-        "elemento" : "pesce palla"
+        "elemento" : "pufferfish"
     },
 
     {
-        "elemento" : "albula"
+        "elemento" : "bonefish"
     },
 
     {
@@ -1723,39 +1704,35 @@
     },
 
     {
-        "elemento" : "scorfano"
+        "elemento" : "red scorpionfish"
     },
 
     {
-        "elemento" : "salmone"
+        "elemento" : "salmon"
     },
 
     {
-        "elemento" : "pesce scorpione"
+        "elemento" : "scorpionfish"
     },
 
     {
-        "elemento" : "pesce leone"
+        "elemento" : "catfish"
     },
 
     {
-        "elemento" : "pesce gatto"
+        "elemento" : "angelfish"
     },
 
     {
-        "elemento" : "pesce angelo"
+        "elemento" : "tinamou"
     },
 
     {
-        "elemento" : "tinamo"
+        "elemento" : "ostrich"
     },
 
     {
-        "elemento" : "struzzo"
-    },
-
-    {
-        "elemento" : "nandù"
+        "elemento" : "greater rhea"
     },
 
     {
@@ -1763,135 +1740,135 @@
     },
 
     {
-        "elemento" : "causario"
+        "elemento" : "cassowary"
     },
 
     {
-        "elemento" : "kamichi"
+        "elemento" : "southern screamer"
     },
 
     {
-        "elemento" : "dendrocigna"
+        "elemento" : "fulvous tree duck"
     },
 
     {
-        "elemento" : "anatra"
+        "elemento" : "duck"
     },
 
     {
-        "elemento" : "oca"
+        "elemento" : "goose"
     },
 
     {
-        "elemento" : "gobbo"
+        "elemento" : "white-headed duck"
     },
 
     {
-        "elemento" : "cigno"
+        "elemento" : "swan"
     },
 
     {
-        "elemento" : "casarca"
+        "elemento" : "ruddy shelduck"
     },
 
     {
-        "elemento" : "moretta"
+        "elemento" : "tufted duck"
     },
 
     {
-        "elemento" : "edredone"
+        "elemento" : "eider"
     },
 
     {
-        "elemento" : "quattrocchi"
+        "elemento" : "goldeneye"
     },
 
     {
-        "elemento" : "pescaiola"
+        "elemento" : "smew"
     },
 
     {
-        "elemento" : "smergo"
+        "elemento" : "mergus"
     },
 
     {
-        "elemento" : "anatra mandarina"
+        "elemento" : "mandarin duck"
     },
 
     {
-        "elemento" : "fistione"
+        "elemento" : "red-crested pochard"
     },
 
     {
-        "elemento" : "alzavola"
+        "elemento" : "eurasian teal"
     },
 
     {
-        "elemento" : "germano"
+        "elemento" : "mallard"
     },
 
     {
-        "elemento" : "tacchino"
+        "elemento" : "turkey"
     },
 
     {
-        "elemento" : "fagiano"
+        "elemento" : "pheasant"
     },
 
     {
-        "elemento" : "ciacalaca"
+        "elemento" : "chachalaca"
     },
 
     {
-        "elemento" : "guan"
+        "elemento" : "white-winged guan"
     },
 
     {
-        "elemento" : "crace"
+        "elemento" : "curassow"
     },
 
     {
-        "elemento" : "pernice"
+        "elemento" : "partridge"
     },
 
     {
-        "elemento" : "quaglia"
+        "elemento" : "quail"
     },
 
     {
-        "elemento" : "strolaga"
+        "elemento" : "loon"
     },
 
     {
-        "elemento" : "pinguino"
+        "elemento" : "penguin"
     },
 
     {
-        "elemento" : "albatro"
+        "elemento" : "albatross"
     },
 
     {
-        "elemento" : "fulmaro"
+        "elemento" : "fulmar"
     },
 
     {
-        "elemento" : "petrello"
+        "elemento" : "petrel"
     },
 
     {
-        "elemento" : "berta"
+        "elemento" : "shearwater"
     },
 
     {
-        "elemento" : "fetonte"
+        "elemento" : "red-billed tropicbird"
     },
 
     {
-        "elemento" : "fenicottero"
+        "elemento" : "flamingo"
     },
 
     {
-        "elemento" : "cicogna"
+        "elemento" : "stork"
     },
 
     {
@@ -1899,7 +1876,7 @@
     },
 
     {
-        "elemento" : "marabù"
+        "elemento" : "marabou stork"
     },
 
     {
@@ -1907,23 +1884,23 @@
     },
 
     {
-        "elemento" : "spatola"
+        "elemento" : "eurasian spoonbill"
     },
 
     {
-        "elemento" : "airone"
+        "elemento" : "grey heron"
     },
 
     {
-        "elemento" : "sgarza"
+        "elemento" : "squacco heron"
     },
 
     {
-        "elemento" : "becco a scarpa"
+        "elemento" : "shoebill"
     },
 
     {
-        "elemento" : "pellicano"
+        "elemento" : "pelican"
     },
 
     {
@@ -1931,15 +1908,15 @@
     },
 
     {
-        "elemento" : "cormorano"
+        "elemento" : "cormorant"
     },
 
     {
-        "elemento" : "fregata"
+        "elemento" : "frigatebird"
     },
 
     {
-        "elemento" : "avvoltoio"
+        "elemento" : "vulture"
     },
 
     {
@@ -1947,11 +1924,11 @@
     },
 
     {
-        "elemento" : "serpentario"
+        "elemento" : "secreatrybird"
     },
 
     {
-        "elemento" : "nibbio"
+        "elemento" : "red kite"
     },
 
     {
@@ -1959,23 +1936,19 @@
     },
 
     {
-        "elemento" : "falco"
+        "elemento" : "falcon"
     },
 
     {
-        "elemento" : "falchetto"
+        "elemento" : "kestrel"
     },
 
     {
-        "elemento" : "gheppio"
+        "elemento" : "crane"
     },
 
     {
-        "elemento" : "gru"
-    },
-
-    {
-        "elemento" : "beccaccia"
+        "elemento" : "woodcock"
     },
 
     {
@@ -1983,15 +1956,15 @@
     },
 
     {
-        "elemento" : "voltapietre"
+        "elemento" : "turnstone"
     },
 
     {
-        "elemento" : "pernice"
+        "elemento" : "partridge"
     },
 
     {
-        "elemento" : "gabbiano"
+        "elemento" : "seagull"
     },
 
     {
@@ -1999,19 +1972,19 @@
     },
 
     {
-        "elemento" : "uria"
+        "elemento" : "murre"
     },
 
     {
-        "elemento" : "piccione"
+        "elemento" : "pidgeon"
     },
 
     {
-        "elemento" : "colomba"
+        "elemento" : "dove"
     },
 
     {
-        "elemento" : "tortora"
+        "elemento" : "turtle dove"
     },
 
     {
@@ -2019,11 +1992,11 @@
     },
 
     {
-        "elemento" : "cacatua"
+        "elemento" : "cockatoo"
     },
 
     {
-        "elemento" : "cenerino"
+        "elemento" : "grey parrot"
     },
 
     {
@@ -2031,31 +2004,31 @@
     },
 
     {
-        "elemento" : "pappagallo"
+        "elemento" : "parrot"
     },
 
     {
-        "elemento" : "guaruba"
+        "elemento" : "golden parakeet"
     },
 
     {
-        "elemento" : "conuro"
+        "elemento" : "conuroe"
     },
 
     {
-        "elemento" : "parrocchetto"
+        "elemento" : "parakeet"
     },
 
     {
-        "elemento" : "pappagallino"
+        "elemento" : "budgie"
     },
 
     {
-        "elemento" : "amazzone"
+        "elemento" : "amazon parrot"
     },
 
     {
-        "elemento" : "coracopsis"
+        "elemento" : "vasa parrot"
     },
 
     {
@@ -2063,7 +2036,7 @@
     },
 
     {
-        "elemento" : "northiella"
+        "elemento" : "bluebonnet"
     },
 
     {
@@ -2071,7 +2044,7 @@
     },
 
     {
-        "elemento" : "lorichetto"
+        "elemento" : "lorikeet"
     },
 
     {
@@ -2079,19 +2052,19 @@
     },
 
     {
-        "elemento" : "caicco"
+        "elemento" : "caique"
     },
 
     {
-        "elemento" : "inseparabile"
+        "elemento" : "lovebird"
     },
 
     {
-        "elemento" : "ecletto"
+        "elemento" : "moluccan eclectus"
     },
 
     {
-        "elemento" : "calopsita"
+        "elemento" : "cockatiel"
     },
 
     {
@@ -2103,31 +2076,31 @@
     },
 
     {
-        "elemento" : "cuculo"
+        "elemento" : "cuckoo"
     },
 
     {
-        "elemento" : "barbagianni"
+        "elemento" : "barn owl"
     },
 
     {
-        "elemento" : "otus"
+        "elemento" : "scops owl"
     },
 
     {
-        "elemento" : "assiolo"
+        "elemento" : "eurasian scops owl"
     },
 
     {
-        "elemento" : "gufo"
+        "elemento" : "owl"
     },
 
     {
-        "elemento" : "civetta"
+        "elemento" : "little owl"
     },
 
     {
-        "elemento" : "rondone"
+        "elemento" : "swift"
     },
 
     {
@@ -2135,19 +2108,19 @@
     },
 
     {
-        "elemento" : "caribe"
+        "elemento" : "carib"
     },
 
     {
-        "elemento" : "colibrì"
+        "elemento" : "hummingbird"
     },
 
     {
-        "elemento" : "ghiandaia"
+        "elemento" : "jay"
     },
 
     {
-        "elemento" : "martin"
+        "elemento" : "kingfisher"
     },
 
     {
@@ -2159,15 +2132,15 @@
     },
 
     {
-        "elemento" : "gruccione"
+        "elemento" : "bee-eater"
     },
 
     {
-        "elemento" : "buceretto"
+        "elemento" : "yellow-billed hornbill"
     },
 
     {
-        "elemento" : "bucero"
+        "elemento" : "hornbill"
     },
 
     {
@@ -2187,7 +2160,7 @@
     },
 
     {
-        "elemento" : "picchio"
+        "elemento" : "woodpecker"
     },
 
     {
@@ -2195,39 +2168,39 @@
     },
 
     {
-        "elemento" : "corvo"
+        "elemento" : "crow"
     },
 
     {
-        "elemento" : "oriolo"
+        "elemento" : "oriol"
     },
 
     {
-        "elemento" : "gazza"
+        "elemento" : "magpie"
     },
 
     {
-        "elemento" : "cornacchia"
+        "elemento" : "carrion crow"
     },
 
     {
-        "elemento" : "cincia"
+        "elemento" : "tit"
     },
 
     {
-        "elemento" : "cinciarella"
+        "elemento" : "blue tit"
     },
 
     {
-        "elemento" : "rondine"
+        "elemento" : "swallow"
     },
 
     {
-        "elemento" : "usignolo"
+        "elemento" : "nightingale"
     },
 
     {
-        "elemento" : "storno"
+        "elemento" : "starling"
     },
 
     {
@@ -2235,39 +2208,35 @@
     },
 
     {
-        "elemento" : "tordo"
+        "elemento" : "thrush"
     },
 
     {
-        "elemento" : "fogliarolo"
+        "elemento" : "javan leafbird"
     },
 
     {
-        "elemento" : "passero"
+        "elemento" : "sparrow"
     },
 
     {
-        "elemento" : "fringuello"
+        "elemento" : "chaffinch"
     },
 
     {
-        "elemento" : "tessitore"
+        "elemento" : "weaver"
     },
 
     {
-        "elemento" : "ballerina"
+        "elemento" : "wagtail"
     },
 
     {
-        "elemento" : "zigolo"
+        "elemento" : "yellowhammer"
     },
 
     {
-        "elemento" : "cacico"
-    },
-
-    {
-        "elemento" : "ittero"
+        "elemento" : "icterid"
     },
 
     {
@@ -2275,15 +2244,15 @@
     },
 
     {
-        "elemento" : "cardinale"
+        "elemento" : "cardinal"
     },
 
     {
-        "elemento" : "pettirosso"
+        "elemento" : "robin"
     },
 
     {
-        "elemento" : "canarino"
+        "elemento" : "canary"
     },
 
     {
@@ -2291,43 +2260,43 @@
     },
 
     {
-        "elemento" : "polpo"
+        "elemento" : "octopus"
     },
 
     {
-        "elemento" : "moscardino"
+        "elemento" : "musky octopus"
     },
 
     {
-        "elemento" : "calamaro"
+        "elemento" : "squid"
     },
 
     {
-        "elemento" : "seppia"
+        "elemento" : "cuttlefish"
     },
 
     {
-        "elemento" : "lumaca di mare"
+        "elemento" : "sea slug"
     },
 
     {
-        "elemento" : "caravella portoghese"
+        "elemento" : "portuguese bluebottle"
     },
 
     {
-        "elemento" : "medusa"
+        "elemento" : "jellyfish"
     },
 
     {
-        "elemento" : "riccio di mare"
+        "elemento" : "sea urchin"
     },
 
     {
-        "elemento" : "paguro"
+        "elemento" : "hermit crab"
     },
 
     {
-        "elemento" : "canocchia"
+        "elemento" : "mantis shrimp"
     },
 
     {
@@ -2335,23 +2304,23 @@
     },
 
     {
-        "elemento" : "gambero"
+        "elemento" : "shrimp"
     },
 
     {
-        "elemento" : "gamberetto"
+        "elemento" : "caridean shrimp"
     },
 
     {
-        "elemento" : "granchio"
+        "elemento" : "crab"
     },
 
     {
-        "elemento" : "aragosta"
+        "elemento" : "spiny lobster"
     },
 
     {
-        "elemento" : "astice"
+        "elemento" : "lobster"
     },
 
     {
@@ -2367,98 +2336,98 @@
     },
 
     {
-        "elemento" : "millepiedi"
+        "elemento" : "millepede"
     },
 
     {
-        "elemento" : "centopiedi"
+        "elemento" : "centipede"
     },
 
     {
-        "elemento" : "amblipige"
+        "elemento" : "whip spider"
     },
 
     {
-        "elemento" : "ragno"
+        "elemento" : "spider"
     },
 
     {
-        "elemento" : "scorpione"
+        "elemento" : "scorpion"
     },
 
     {
-        "elemento" : "blatta"
+        "elemento" : "cockroach"
     },
 
     {
-        "elemento" : "cocchiera"
+        "elemento" : "coach-horse beetle"
     },
 
     {
-        "elemento" : "scarabeo"
+        "elemento" : "dung beetle"
     },
 
     {
-        "elemento" : "coleottero"
+        "elemento" : "beetle"
     },
 
     {
-        "elemento" : "coccinella"
+        "elemento" : "ladybug"
     },
 
     {
-        "elemento" : "farfalla"
+        "elemento" : "butterfly"
     },
 
     {
-        "elemento" : "falena"
+        "elemento" : "moth"
     },
 
     {
-        "elemento" : "bruco"
+        "elemento" : "caterpillar"
     },
 
     {
-        "elemento" : "grillo"
+        "elemento" : "cricket"
     },
 
     {
-        "elemento" : "cavalletta"
+        "elemento" : "grasshopper"
     },
 
     {
-        "elemento" : "locusta"
+        "elemento" : "locust"
     },
 
     {
-        "elemento" : "mantide"
+        "elemento" : "mantis"
     },
 
     {
-        "elemento" : "ape"
+        "elemento" : "bee"
     },
 
     {
-        "elemento" : "bombo"
+        "elemento" : "bumblebee"
     },
 
     {
-        "elemento" : "vespa"
+        "elemento" : "wasp"
     },
 
     {
-        "elemento" : "calabrone"
+        "elemento" : "hornet"
     },
 
     {
-        "elemento" : "cimice"
+        "elemento" : "bug"
     },
 
     {
-        "elemento" : "insetto stecco"
+        "elemento" : "stick insect"
     },
 
     {
-        "elemento" : "insetto foglia"
+        "elemento" : "leaf insect"
     }
 ]
